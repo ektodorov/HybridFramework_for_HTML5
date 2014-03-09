@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html><head>
+    
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+        <title>Index</title>
+        <link rel="stylesheet" type="text/css" href="css_style/index.css">
+            
+</head><body>
+    
+<script src="java_script/hfh_js.js"></script>
+<script>
+function getDocsDir() {
+    var src = 'jn://{"method":"callGetPath:", "docsdir":"yes", "success":"successGetDocsDir"}';
+    var rootElement = document.documentElement;
+    var frameElement = document.createElement("IFRAME");
+    frameElement.setAttribute("src",src);
+    rootElement.appendChild(frameElement);
+    frameElement.parentNode.removeChild(frameElement);
+    window.event.preventDefault();
+}
+
+function getTempDir() {
+    var src = 'jn://{"method":"callGetPathToTempDir:", "success":"successGetTempDir"}';
+    var rootElement = document.documentElement;
+    var frameElement = document.createElement("IFRAME");
+    frameElement.setAttribute("src",src);
+    rootElement.appendChild(frameElement);
+    frameElement.parentNode.removeChild(frameElement);
+    window.event.preventDefault();
+}
+
+function successGetDocsDir(aPath) {
+    document.getElementById("docsdir").innerHTML = aPath;
+}
+
+function successGetTempDir(aPath) {
+    document.getElementById("tempdir").innerHTML = aPath;
+}
+</script>
+
+    <center>
+    <p>Disk Storage</p>
+    </center>
+    <p><button ontouchend="getDocsDir()">Get Documents directory path</button></p><br/>
+    <p><button ontouchend="getTempDir()">Get Temp directory path</button></p><br/>
+    
+    Documents directory path:
+    <p id="docsdir"></p><br/>
+    
+    Temp directory path:
+    <p id="tempdir"></p>
+</body></html>

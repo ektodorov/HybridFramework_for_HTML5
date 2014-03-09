@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>My Title</title>
+	<link rel='stylesheet' href='css_style/index.css' type='text/css' media='all' />
+</head>
+<body>
+    
+<script src="java_script/hfh_js.js"></script>
+<script>
+    var mIdxButton;
+    var mCurrentRow;
+    var mIsMoved = false;
+    
+        function myRemove() {
+            var src = 'jn://{"method":"callRemoveFromSuperView:", "viewidx":' + idx + '}';
+            var rootElement = document.documentElement;
+            var frameElement = document.createElement("IFRAME");
+            frameElement.setAttribute("src",src);
+            rootElement.appendChild(frameElement);
+            frameElement.parentNode.removeChild(frameElement);
+        }
+    
+        function myShow() {
+            var src = 'jn://{"method":"setViewShown:", "viewidx":' + idx + '}';
+            var rootElement = document.documentElement;
+            var frameElement = document.createElement("IFRAME");
+            frameElement.setAttribute("src",src);
+            rootElement.appendChild(frameElement);
+            frameElement.parentNode.removeChild(frameElement);
+        }
+    
+        function successButton(arg) {
+            mIdxButton = arg;
+            
+            var srcWebView = 'jn://{"method":"callSetSizeWebViewMain:", "x":0, "y":0, "width":320, "height":430, "success":"mySuccess", "error":"myError"}';
+            var rootElement = document.documentElement;
+            var frameElement = document.createElement("IFRAME");
+            frameElement.setAttribute("src",srcWebView);
+            rootElement.appendChild(frameElement);
+            frameElement.parentNode.removeChild(frameElement);
+        }
+    
+
+        function changeColorOnClick(tableRow, openPage) {
+//            var rows = document.getElementsByTagName('tr');
+//            for(var x = 1; x < rows.length; x++) {
+//                var row = rows[x];
+//                row.style.backgroundColor = '#dddddd';
+//            }
+//            tableRow.style.backgroundColor = 'green';
+//            if(mCurrentRow == tableRow) {
+//                tableRow.style.backgroundColor = '#dddddd';
+//            }
+//            mCurrentRow = tableRow;
+            if(!mIsMoved) {
+                window.document.location = openPage;
+            }
+            mIsMoved = false;
+            event.preventDefault();
+        }
+    
+        function myHome() {
+            window.document.location = "project_details.html";
+        }
+    
+        function makeGui() {
+            var src = 'jn://{"method":"callMakeButton:", "buttontype":0, "x":0, "y":430, "width":320, "height":50, "title":"Index", "onclick":"loadHome();", "success":"successButton", "error":"myError"}';
+            var rootElement = document.documentElement;
+            var frameElement = document.createElement("IFRAME");
+            frameElement.setAttribute("src",src);
+            rootElement.appendChild(frameElement);
+            frameElement.parentNode.removeChild(frameElement);
+        }
+    
+document.addEventListener("touchmove", function(){
+                          if(event.type == "touchmove") {mIsMoved = true;}
+                          }, false);
+    
+document.ready = makeGui();
+</script>
+    
+    <br/><br/>
+    <table width="100%" border="1" cellpadding="0" cellspacing="0">
+        <tr style="background:gray; color:white">
+            <th>N</th> <th>Demonstrate task</th>
+        </tr>
+        <tr ontouchend="changeColorOnClick(this, 'instance_variables.html');">
+            <td>1</td> <td>Instance variables persistence</td>
+        </tr>
+        <tr ontochend="changeColorOnClick(this, 'disk_storage.html');">
+            <td>2</td> <td>Disk Storage</td>
+        </tr>
+        <tr ontouchend="changeColorOnClick(this, 'command_buffer.html');">
+            <td>3</td> <td>Command Buffer</td>
+        </tr>
+        <tr ontouchend="changeColorOnClick(this, 'database.html');">
+            <td>4</td> <td>SQLite Database</td>
+        </tr>
+        <tr ontouchend="changeColorOnClick(this, 'camera_photolibrary.html');">
+            <td>5</td> <td>Camera, Photo library</td>
+        </tr>
+        <tr ontouchend="changeColorOnClick(this, 'motion_sensors.html');">
+            <td>6</td> <td>Motion sensors</td>
+        </tr>
+        <tr ontouchend="changeColorOnClick(this, 'contacts.html');">
+            <td>7</td> <td>Contacts</td>
+        </tr>
+    </table>
+
+</body>
+</html>

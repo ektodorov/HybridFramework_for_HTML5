@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html><head>
+    
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+        <title>Index</title>
+        <link rel="stylesheet" type="text/css" href="css_style/index.css">
+            
+</head><body>
+    
+<script src="java_script/hfh_js.js"></script>
+<script>
+
+function showContacts() {
+    var src = 'jn://{"method":"callShowContacts:", "success":"successContacts"}';
+    var rootElement = document.documentElement;
+    var frameElement = document.createElement("IFRAME");
+    frameElement.setAttribute("src",src);
+    rootElement.appendChild(frameElement);
+    frameElement.parentNode.removeChild(frameElement);
+    window.event.preventDefault();
+}
+
+function successContacts(aArg) {
+    document.getElementById("result").innerHTML = aArg;
+}
+
+    </script>
+    <center>
+    <p>Constacts</p>
+    <button ontouchend="showContacts()">Open Address Book</button>
+    </center>
+
+Result:
+<p id="result"></p>
+
+</body></html>

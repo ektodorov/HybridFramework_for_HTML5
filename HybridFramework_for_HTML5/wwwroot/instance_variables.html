@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html><head>
+    
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+        <title>Index</title>
+        <link rel="stylesheet" type="text/css" href="css_style/index.css">
+            
+</head><body>
+    
+<script src="java_script/hfh_js.js"></script>
+<script>
+    
+function saveInstanceVariable() {
+    var varName = document.getElementById("savename").value;
+    var varValue = document.getElementById("saveval").value;
+    var src = 'jn://{"method":"callSaveInstanceVariable:", "name":"' + varName + '", "value":"' + varValue + '", "success":"successSaveInstanceVariable", "error":"errorSaveInstanceVariable"}';
+    var rootElement = document.documentElement;
+    var frameElement = document.createElement("IFRAME");
+    frameElement.setAttribute("src",src);
+    rootElement.appendChild(frameElement);
+    frameElement.parentNode.removeChild(frameElement);
+    window.event.preventDefault();
+}
+
+function getInstanceVariable() {
+    var varName = document.getElementById("getname").value;
+    var src = 'jn://{"method":"callGetInstanceVariable:", "name":"' + varName + '", "success":"successGetInstanceVariable", "error":"errorGetInstanceVariable"}';
+    var rootElement = document.documentElement;
+    var frameElement = document.createElement("IFRAME");
+    frameElement.setAttribute("src",src);
+    rootElement.appendChild(frameElement);
+    frameElement.parentNode.removeChild(frameElement);
+    window.event.preventDefault();
+}
+
+function deleteInstanceVariable() {
+    var varName = document.getElementById("delname").value;
+    var src = 'jn://{"method":"callRemoveInstanceVariable:", "name":"' + varName + '"}';
+    var rootElement = document.documentElement;
+    var frameElement = document.createElement("IFRAME");
+    frameElement.setAttribute("src",src);
+    rootElement.appendChild(frameElement);
+    frameElement.parentNode.removeChild(frameElement);
+    window.event.preventDefault();
+}
+
+function successSaveInstanceVariable(aArg) {
+    document.getElementById("log").innerHTML = "successSaveInstanceVariable";
+}
+function successGetInstanceVariable(aArg) {
+    document.getElementById("getval").innerHTML = aArg;
+    document.getElementById("log").innerHTML = "successGetInstanceVariable";
+}
+function errorSaveInstanceVariable() {
+    document.getElementById("log").innerHTML = "errorSaveInstanceVariable";
+}
+function errorGetInstanceVariable() {
+    document.getElementById("log").innerHTML = "errorGetInstanceVariable";
+}
+
+function displayValue() {
+    var varName = document.getElementById("savename").value;
+    var varValue = document.getElementById("saveval").value;
+    window.alert(varName + " - " + varValue);
+}
+
+</script>
+
+<center>
+    <p>Instance variables</p>
+    
+    Var Name:<input type="text" id="savename"><br/><br/><br/>
+    Var Value:<input type="text" id="saveval"><br/><br/><br/>
+    <button ontouchend="saveInstanceVariable()">Save instance variable</button><br/><br/>
+    <hr><br/>
+
+    Var Name:<input type="text" id="getname"><span id="getval"></span><br/><br/><br/>
+    <button ontouchend="getInstanceVariable()">Get instance variable</button><br/><br/>
+    <hr><br/>
+
+    Var Name:<input type="text" id="delname"><br/><br/>
+    <button ontouchend="deleteInstanceVariable()">Delete instance variable</button><br/>
+</center>
+
+Log:
+<p id="log"></p>
+
+</body></html>

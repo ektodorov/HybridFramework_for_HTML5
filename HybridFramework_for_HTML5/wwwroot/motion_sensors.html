@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html><head>
+    
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+        <title>Index</title>
+        <link rel="stylesheet" type="text/css" href="css_style/index.css">
+            
+</head><body>
+    
+<script src="java_script/hfh_js.js"></script>
+<script>
+    
+function startMonitiring() {
+    var src = 'jn://{"method":"callStartMonitorDeviceOrientation:", "success":"successMonitoring"}';
+    var rootElement = document.documentElement;
+    var frameElement = document.createElement("IFRAME");
+    frameElement.setAttribute("src",src);
+    rootElement.appendChild(frameElement);
+    frameElement.parentNode.removeChild(frameElement);
+    window.event.preventDefault();
+}
+
+function stopMonitoring() {
+    var src = 'jn://{"method":"callStopMonitorDeviceOrientation:"}';
+    var rootElement = document.documentElement;
+    var frameElement = document.createElement("IFRAME");
+    frameElement.setAttribute("src",src);
+    rootElement.appendChild(frameElement);
+    frameElement.parentNode.removeChild(frameElement);
+    window.event.preventDefault();
+}
+
+function successMonitoring(aArg) {
+    document.getElementById("result").innerHTML = aArg;
+}
+
+</script>
+
+<center>
+<p>Motion Sensors</p>
+
+<p><button ontouchend="startMonitoring()">Start Monitoring Device Orientation</button></p>
+<p><button ontouchend="stopMonitoring()">Stop Monitoring Device Orientation</button></p>
+</center>
+
+<br/>
+Result:
+<p id="result"></p>
+
+<br/>
+Log:
+<p id="log"></p>
+
+</body></html>
