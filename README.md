@@ -8,7 +8,7 @@ The framework through its API enables you to:
 - use device specific hardware (camera, address book)
 - preserve state while using multiple HTML pages
 
-<a href="http://toci16.wix.com/hybridframework">Promo site</a>
+<a href="http://toci16.wix.com/hybridframework">Promo site</a></br>
 <a href="http://techzealous.net46.net/hfh/">Documentation</a>
 
 
