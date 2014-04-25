@@ -191,7 +191,7 @@ static BridgeHelperHfh *helperInstance;
         int green = [(NSNumber *)[aDict objectForKey:HFH_KEY_GREEN] intValue];
         int blue = [(NSNumber *)[aDict objectForKey:HFH_KEY_BLUE] intValue];
         int alpha = [(NSNumber *)[aDict objectForKey:HFH_KEY_ALPHA] intValue];
-        [myButton setBackgroundColor:[UIColor colorWithRed:red green:green blue:blue alpha:alpha]];
+        [myButton setBackgroundColor:[UIColor colorWithRed:1.0f/red green:1.0f/green blue:1.0f/blue alpha:1.0f/alpha]];
     }
     
     NSString *strImg = (NSString *)[aDict objectForKey:HFH_KEY_IMAGE];
