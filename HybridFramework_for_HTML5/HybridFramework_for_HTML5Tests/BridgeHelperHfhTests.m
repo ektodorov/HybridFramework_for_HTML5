@@ -1,18 +1,18 @@
 //
-//  HybridFramework_for_HTML5Tests.m
-//  HybridFramework_for_HTML5Tests
+//  BridgeHelperHfhTests.m
+//  HybridFramework_for_HTML5
 //
-//  Created by Emil Todorov on 12/5/13.
-//  Copyright (c) 2013 techzealous. All rights reserved.
+//  Created by Emil Todorov on 4/27/14.
+//  Copyright (c) 2014 techzealous. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface HybridFramework_for_HTML5Tests : XCTestCase
+@interface BridgeHelperHfhTests : XCTestCase
 
 @end
 
-@implementation HybridFramework_for_HTML5Tests
+@implementation BridgeHelperHfhTests
 
 - (void)setUp
 {

@@ -27,6 +27,8 @@
 		395B64021850B3D6003E8056 /* wwwroot in Resources */ = {isa = PBXBuildFile; fileRef = 395B64011850B3D6003E8056 /* wwwroot */; };
 		395B64051850C9D9003E8056 /* BridgeHelperHfh.m in Sources */ = {isa = PBXBuildFile; fileRef = 395B64041850C9D9003E8056 /* BridgeHelperHfh.m */; };
 		395B64091850D6F3003E8056 /* InstanceDataHfh.m in Sources */ = {isa = PBXBuildFile; fileRef = 395B64081850D6F3003E8056 /* InstanceDataHfh.m */; };
+		397F3489190C76250068501D /* ConstantsHfhTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 397F3488190C76250068501D /* ConstantsHfhTests.m */; };
+		397F348B190C77540068501D /* BridgeHelperHfhTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 397F348A190C77540068501D /* BridgeHelperHfhTests.m */; };
 		39DC5AC2185A24AD00A6BF1D /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39DC5AC1185A24AD00A6BF1D /* AddressBook.framework */; };
 		39DC5AC4185A24B500A6BF1D /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39DC5AC3185A24B500A6BF1D /* AddressBookUI.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +74,8 @@
 		395B64071850D6F3003E8056 /* InstanceDataHfh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstanceDataHfh.h; sourceTree = "<group>"; };
 		395B64081850D6F3003E8056 /* InstanceDataHfh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstanceDataHfh.m; sourceTree = "<group>"; };
 		395B640A1850DCDB003E8056 /* BridgeListenerHfh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgeListenerHfh.h; sourceTree = "<group>"; };
+		397F3488190C76250068501D /* ConstantsHfhTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConstantsHfhTests.m; sourceTree = "<group>"; };
+		397F348A190C77540068501D /* BridgeHelperHfhTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BridgeHelperHfhTests.m; sourceTree = "<group>"; };
 		39DC5AC1185A24AD00A6BF1D /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		39DC5AC3185A24B500A6BF1D /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -171,6 +175,8 @@
 			children = (
 				395B63EC1850AF5D003E8056 /* HybridFramework_for_HTML5Tests.m */,
 				395B63E71850AF5D003E8056 /* Supporting Files */,
+				397F3488190C76250068501D /* ConstantsHfhTests.m */,
+				397F348A190C77540068501D /* BridgeHelperHfhTests.m */,
 			);
 			path = HybridFramework_for_HTML5Tests;
 			sourceTree = "<group>";
@@ -333,7 +339,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				397F3489190C76250068501D /* ConstantsHfhTests.m in Sources */,
 				395B63ED1850AF5D003E8056 /* HybridFramework_for_HTML5Tests.m in Sources */,
+				397F348B190C77540068501D /* BridgeHelperHfhTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
