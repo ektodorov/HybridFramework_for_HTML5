@@ -12,7 +12,7 @@
     var mIdxButton;
     var mIsMoved = false;
     
-        function myRemove() {
+        function myRemove(idx) {
             var src = 'jn://{"method":"callRemoveFromSuperView:", "viewidx":' + idx + '}';
             var rootElement = document.documentElement;
             var frameElement = document.createElement("IFRAME");
@@ -21,13 +21,17 @@
             frameElement.parentNode.removeChild(frameElement);
         }
     
-        function myShow() {
+        function myShow(idx) {
             var src = 'jn://{"method":"setViewShown:", "viewidx":' + idx + '}';
             var rootElement = document.documentElement;
             var frameElement = document.createElement("IFRAME");
             frameElement.setAttribute("src",src);
             rootElement.appendChild(frameElement);
             frameElement.parentNode.removeChild(frameElement);
+        }
+
+        function myError(error) {
+            window.alert("Error " + error);
         }
     
         function successButton(arg) {
@@ -47,10 +51,6 @@
             }
             mIsMoved = false;
             event.preventDefault();
-        }
-    
-        function myHome() {
-            window.document.location = "project_details.html";
         }
     
         function makeGui() {
@@ -75,7 +75,7 @@ document.ready = makeGui();
         <tr ontouchend="onTouchEndAction('instance_variables.html');">
             <td>1</td> <td>Instance variables persistence</td>
         </tr>
-        <tr ontochend="onTouchEndAction('disk_storage.html');">
+        <tr ontouchend="onTouchEndAction('disk_storage.html');">
             <td>2</td> <td>Disk Storage</td>
         </tr>
         <tr ontouchend="onTouchEndAction('command_buffer.html');">
