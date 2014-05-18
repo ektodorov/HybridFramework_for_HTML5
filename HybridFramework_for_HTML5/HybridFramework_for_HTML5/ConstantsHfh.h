@@ -52,6 +52,7 @@ extern NSString * const HFH_KEY_IMAGE;
 extern NSString * const HFH_KEY_RECTANGLE;
 extern NSString * const HFH_KEY_ONCLICK;
 extern NSString * const HFH_KEY_TITLE;
+extern NSString * const HFH_KEY_VIEWRESIZINGMASK;
 extern NSString * const HFH_KEY_NAME;
 extern NSString * const HFH_KEY_VALUE;
 extern NSString * const HFH_KEY_PATH;
@@ -60,7 +61,15 @@ extern NSString * const HFH_KEY_TEMPDIR;
 extern NSString * const HFH_KEY_SQL;
 extern NSString * const HFH_KEY_BUFFER_FILEPATH;
 
-/* File command buffer */
+/* File command buffer 
+ *   UIViewAutoresizingNone                 = 0,
+ *   UIViewAutoresizingFlexibleLeftMargin   = 1     //1 << 0,
+ *   UIViewAutoresizingFlexibleWidth        = 2     //1 << 1,
+ *   UIViewAutoresizingFlexibleRightMargin  = 4     //1 << 2,
+ *   UIViewAutoresizingFlexibleTopMargin    = 8     //1 << 3,
+ *   UIViewAutoresizingFlexibleHeight       = 16    //1 << 4,
+ *   UIViewAutoresizingFlexibleBottomMargin = 32    //1 << 5
+ */
 extern NSString * const HFH_BUFFER_FILENAME;
 
 @interface ConstantsHfh : NSObject

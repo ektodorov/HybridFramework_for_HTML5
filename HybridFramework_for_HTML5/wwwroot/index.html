@@ -33,6 +33,10 @@
         function myError(error) {
             window.alert("Error " + error);
         }
+
+        function mySuccess() {
+            window.alert("location=" + window.document.location);
+        }
     
         function successButton(arg) {
             mIdxButton = arg;
@@ -45,16 +49,16 @@
             frameElement.parentNode.removeChild(frameElement);
         }
 
-        function onTouchEndAction(openPage) {
+        function onTouchEndAction(aPage) {
             if(!mIsMoved) {
-                window.document.location = openPage;
+                window.document.location = aPage;
             }
             mIsMoved = false;
             event.preventDefault();
         }
     
         function makeGui() {
-            var src = 'jn://{"method":"callMakeButton:", "buttontype":0, "x":0, "y":430, "width":320, "height":50, "title":"Index", "onclick":"loadHome();", "success":"successButton", "error":"myError"}';
+            var src = 'jn://{"method":"callMakeButton:", "buttontype":0, "x":0, "y":430, "width":320, "height":50, "title":"Index", "onclick":"loadHome();", "resizingmask":10, "success":"successButton", "error":"myError"}';
             var rootElement = document.documentElement;
             var frameElement = document.createElement("IFRAME");
             frameElement.setAttribute("src",src);

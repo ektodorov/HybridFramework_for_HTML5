@@ -65,7 +65,6 @@
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSURL *url = [request URL];
     NSString *strUrl = url.absoluteString;
-    //NSLog(@"BridgeVCHfh, %i, strUrl=%@", __LINE__, strUrl);
     if([[strUrl lowercaseString] hasPrefix:HFH_SCHEMA_PREFIX]) {
         dispatch_queue_t callHfh = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         dispatch_async(callHfh, ^(void){

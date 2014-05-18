@@ -164,7 +164,7 @@ static BridgeHelperHfh *helperInstance;
 
 
 /* Native View use */
-//'jn://{"method":"callSetSizeWebViewMain:", "x":"x_position", "y":"y_position", "width":"size_width", "height":"size_height"}'
+//'jn://{"method":"callSetSizeWebViewMain:", "x":x_position, "y":y_position, "width":size_width, "height":size_height}'
 - (void) callSetSizeWebViewMain:(NSDictionary *)aDict {
     __weak UIWebView *webViewMain = [self.bridgeListener getWebViewMain];
     //NSValue *valWebView = [[InstanceDataHfh getInstanceData].arrayViews firstObject];
@@ -179,7 +179,8 @@ static BridgeHelperHfh *helperInstance;
     });
 }
 
-//'jn://{"method":callMakeButton:", "buttontype":"type_int", "red":"redcolorvalue", "green":"greencolorvalue", "blue":"bluecolorvalue", "alpha":"alpha_value", "x":"x_position", "y":"y_position", "width":"size_width", "height":"size_height", "onclick":"javascript_function_name", "title":"button_title"}'
+//'jn://{"method":callMakeButton:", "buttontype":type_int, "red":redcolorvalue, "green":greencolorvalue, "blue":bluecolorvalue, "alpha":alpha_value, "x":x_position, "y":y_position,
+//    "width":size_width, "height":size_height, "onclick":"javascript_function_name", "title":"button_title", "resizingmask":resizingmask_value}'
 // Values for color - [0-255]
 - (void) callMakeButton:(NSDictionary *)aDict {
     NSNumber *numButtonType = [aDict objectForKey:HFH_KEY_BUTTONTYPE];
@@ -202,6 +203,7 @@ static BridgeHelperHfh *helperInstance;
     int width = [(NSNumber *)[aDict objectForKey:HFH_KEY_WIDTH] intValue];
     int height = [(NSNumber *)[aDict objectForKey:HFH_KEY_HEIGHT] intValue];
     myButton.frame = CGRectMake(posX, posY, width, height);
+    myButton.autoresizingMask = [(NSNumber *)[aDict objectForKey:HFH_KEY_VIEWRESIZINGMASK] intValue];
     
     NSString *strOnClick = (NSString *)[aDict objectForKey:HFH_KEY_ONCLICK];
     if(strOnClick) {
@@ -225,7 +227,7 @@ static BridgeHelperHfh *helperInstance;
     [self callJsFunction:fName withArg:[NSString stringWithFormat:@"%i", idx]];
 }
 
-//'jn://{"method":"setButtonTitle:", "title":"button_title", "viewidx":"index_in_the_instance_views_array"}'
+//'jn://{"method":"setButtonTitle:", "title":"button_title", "viewidx":index_in_the_instance_views_array}'
 - (void) setButtonTitle:(NSDictionary *)aDict {
     NSString *strTitle = (NSString *)[aDict objectForKey:HFH_KEY_TITLE];
     NSNumber *viewIdx = [aDict objectForKey:HFH_KEY_VIEWIDX];
@@ -235,7 +237,7 @@ static BridgeHelperHfh *helperInstance;
     });
 }
 
-//'jn://{"method":"setBackgroundColor:", "red":"color_value", "green":"color_value", "blue":"color_value", "alpha":"alpha_value", "viewidx":"index_in_the_instance_views_array"}'
+//'jn://{"method":"setBackgroundColor:", "red":color_value, "green":color_value, "blue":color_value, "alpha":alpha_value, "viewidx":index_in_the_instance_views_array}'
 - (void) setBackgroundColor:(NSDictionary *)aDict {
     int red = [(NSNumber *)[aDict objectForKey:HFH_KEY_RED] intValue];
     int green = [(NSNumber *)[aDict objectForKey:HFH_KEY_GREEN] intValue];
@@ -247,7 +249,7 @@ static BridgeHelperHfh *helperInstance;
     [view setBackgroundColor:[UIColor colorWithRed:red green:green blue:blue alpha:alpha]];
 }
 
-//'jn://{"method":"setButtonBackgroundImage:", "img":"filepath_toimage_file", "viewidx":"index_in_the_instance_views_array"}'
+//'jn://{"method":"setButtonBackgroundImage:", "img":"filepath_toimage_file", "viewidx":index_in_the_instance_views_array}'
 - (void) setButtonBackgroundImage:(NSDictionary *)aDict {
     NSString *strImg = (NSString *)[aDict objectForKey:HFH_KEY_IMAGE];
     UIImage *img = [UIImage imageNamed:strImg];
@@ -257,7 +259,7 @@ static BridgeHelperHfh *helperInstance;
     [view setBackgroundImage:img forState:UIControlStateNormal];
 }
 
-//'jn://{"method":"setPositionAndSize:", "x":"x_position", "y":"y_position", "width":"size_width", "height":"size_height", "viewidx":"index_in_the_instance_views_array"}'
+//'jn://{"method":"setPositionAndSize:", "x":x_position, "y":y_position, "width":size_width, "height":size_height, "viewidx":index_in_the_instance_views_array}'
 - (void) setPositionAndSize:(NSDictionary *)aDict {
     int posX = [(NSNumber *)[aDict objectForKey:HFH_KEY_POSX] intValue];
     int posY = [(NSNumber *)[aDict objectForKey:HFH_KEY_POSY] intValue];
@@ -269,7 +271,7 @@ static BridgeHelperHfh *helperInstance;
     view.frame = CGRectMake(posX, posY, width, height);
 }
 
-//'jn://{"method":"setButtonOnClickListener:", "onclick":"javascript_function_name", "viewidx":"index_in_the_instance_views_array"}'
+//'jn://{"method":"setButtonOnClickListener:", "onclick":"javascript_function_name", "viewidx":index_in_the_instance_views_array}'
 - (void) setButtonOnClickListener:(NSDictionary *)aDict {
     NSString *strOnClick = (NSString *)[aDict objectForKey:HFH_KEY_ONCLICK];
     [[InstanceDataHfh getInstanceData].arrayPerformJavaScript addObject:strOnClick];
@@ -278,7 +280,7 @@ static BridgeHelperHfh *helperInstance;
     [view addTarget:self action:@selector(callPerformJavaScript:) forControlEvents:UIControlEventTouchUpInside];
 }
 
-//'jn://{"method":"setViewHidden:", "viewidx":"index_in_the_instance_views_array"}'
+//'jn://{"method":"setViewHidden:", "viewidx":index_in_the_instance_views_array}'
 - (void) setViewHidden:(NSDictionary *)aDict {
     NSNumber *viewIdx = [aDict objectForKey:HFH_KEY_VIEWIDX];
     __weak UIView *view = (UIView *)[[InstanceDataHfh getInstanceData].arrayViews objectAtIndex:[viewIdx intValue]];
@@ -287,7 +289,7 @@ static BridgeHelperHfh *helperInstance;
     });
 }
 
-//'jn://{"method":"setViewShown:", "viewidx":"index_in_the_instance_views_array"}'
+//'jn://{"method":"setViewShown:", "viewidx":index_in_the_instance_views_array}'
 - (void) setViewShown:(NSDictionary *)aDict {
     NSNumber *viewIdx = [aDict objectForKey:HFH_KEY_VIEWIDX];
     __weak UIView *view = (UIView *)[[InstanceDataHfh getInstanceData].arrayViews objectAtIndex:[viewIdx intValue]];
@@ -296,7 +298,7 @@ static BridgeHelperHfh *helperInstance;
     });
 }
 
-//'jn://{"method":"callRemoveFromSuperView:", "viewidx":"index_in_the_instance_views_array"}'
+//'jn://{"method":"callRemoveFromSuperView:", "viewidx":index_in_the_instance_views_array}'
 - (void) callRemoveFromSuperView:(NSDictionary *)aDict {
     NSNumber *viewIdx = [aDict objectForKey:HFH_KEY_VIEWIDX];
     __weak UIView *view = (UIView *)[[InstanceDataHfh getInstanceData].arrayViews objectAtIndex:[viewIdx intValue]];
@@ -305,14 +307,14 @@ static BridgeHelperHfh *helperInstance;
     });
 }
 
-//'jn://{"method":"callReleaseView:", "viewidx":"index_in_the_instance_views_array"}'
+//'jn://{"method":"callReleaseView:", "viewidx":index_in_the_instance_views_array}'
 - (void) callReleaseView:(NSDictionary *)aDict {
     NSNumber *viewIdx = [aDict objectForKey:HFH_KEY_VIEWIDX];
     [[InstanceDataHfh getInstanceData].arrayViews removeObjectAtIndex:[viewIdx intValue]];
     [[InstanceDataHfh getInstanceData].arrayPerformJavaScript removeObjectAtIndex:[viewIdx integerValue]];
 }
 
-//'jn://{"method":"callRemoveView:", "viewidx":"index_in_the_instance_views_array"}'
+//'jn://{"method":"callRemoveView:", "viewidx":index_in_the_instance_views_array}'
 - (void) callRemoveView:(NSDictionary *)aDict {
     NSNumber *viewIdx = [aDict objectForKey:HFH_KEY_VIEWIDX];
     NSInteger idx = [viewIdx integerValue];

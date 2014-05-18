@@ -78,6 +78,17 @@ NSString * const HFH_KEY_ONCLICK = @"onclick";
 /* Key with name for title/lable of a view */
 NSString * const HFH_KEY_TITLE = @"title";
 
+/* Key with name for ViewAutoresizingMask 
+ *   UIViewAutoresizingNone                 = 0,
+ *   UIViewAutoresizingFlexibleLeftMargin   = 1     //1 << 0,
+ *   UIViewAutoresizingFlexibleWidth        = 2     //1 << 1,
+ *   UIViewAutoresizingFlexibleRightMargin  = 4     //1 << 2,
+ *   UIViewAutoresizingFlexibleTopMargin    = 8     //1 << 3,
+ *   UIViewAutoresizingFlexibleHeight       = 16    //1 << 4,
+ *   UIViewAutoresizingFlexibleBottomMargin = 32    //1 << 5
+ */
+NSString * const HFH_KEY_VIEWRESIZINGMASK = @"resizingmask";
+
 /* Key with name of instance variable */
 NSString * const HFH_KEY_NAME = @"name";
 

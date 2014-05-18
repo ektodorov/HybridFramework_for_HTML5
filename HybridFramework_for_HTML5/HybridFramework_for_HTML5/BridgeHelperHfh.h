@@ -128,13 +128,13 @@
  * 
  * Type (optional):
  * HFH_KEY_BUTTONTYPE = "type"
- * ButtonTypeCustom = 0
- * ButtonTypeSystem = 1
- * ButtonTypeDetailDisclosure = 2
- * ButtonTypeInfoLight = 3
- * ButtonTypeInfoDark = 4
- * ButtonTypeContactAdd = 5
- * ButtonTypeRoundedRect = 6
+ *  ButtonTypeCustom = 0
+ *  ButtonTypeSystem = 1
+ *  ButtonTypeDetailDisclosure = 2
+ *  ButtonTypeInfoLight = 3
+ *  ButtonTypeInfoDark = 4
+ *  ButtonTypeContactAdd = 5
+ *  ButtonTypeRoundedRect = 6
  *
  * Color (optional):
  * HFH_KEY_RED = "red"
@@ -150,6 +150,16 @@
  *
  * Title (optional):
  * HFH_KEY_TITLE = "title"
+ *
+ * AutoresizingMask
+ * HFH_KEY_VIEWRESIZINGMASK = "resizingmask";
+ *   UIViewAutoresizingNone                 = 0,
+ *   UIViewAutoresizingFlexibleLeftMargin   = 1     //1 << 0,
+ *   UIViewAutoresizingFlexibleWidth        = 2     //1 << 1,
+ *   UIViewAutoresizingFlexibleRightMargin  = 4     //1 << 2,
+ *   UIViewAutoresizingFlexibleTopMargin    = 8     //1 << 3,
+ *   UIViewAutoresizingFlexibleHeight       = 16    //1 << 4,
+ *   UIViewAutoresizingFlexibleBottomMargin = 32    //1 << 5
  *
  * @return index of the view in the array of native views
  */
