@@ -79,4 +79,4 @@ var KEY_SQL = "sql";
 /* Key with file path to HFH Command buffer file */
 var KEY_BUFFER_FILEPATH = "hfh_bufferfile_path";
 
-function loadHome() {window.document.location = "index.html";}
+function loadHome() {window.location = "index.html";}

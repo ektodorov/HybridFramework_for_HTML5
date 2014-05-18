@@ -35,7 +35,7 @@
         }
 
         function mySuccess() {
-            window.alert("location=" + window.document.location);
+            //do nothing
         }
     
         function successButton(arg) {
@@ -51,7 +51,7 @@
 
         function onTouchEndAction(aPage) {
             if(!mIsMoved) {
-                window.document.location = aPage;
+                window.location = aPage;
             }
             mIsMoved = false;
             event.preventDefault();

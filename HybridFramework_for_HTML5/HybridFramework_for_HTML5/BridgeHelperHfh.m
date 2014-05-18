@@ -606,7 +606,7 @@ static BridgeHelperHfh *helperInstance;
 #pragma mark Additional Methods
 - (void) callLoadHome:(NSDictionary *)aDict {
     __weak BridgeHelperHfh *ctx = self;
-    dispatch_async(dispatch_get_main_queue(), ^{ [ctx.bridgeListener callJsFunction:@"window.document.location = 'index.html';"]; });
+    dispatch_async(dispatch_get_main_queue(), ^{ [ctx.bridgeListener callJsFunction:@"window.location = 'index.html';"]; });
 }
 
 @end
