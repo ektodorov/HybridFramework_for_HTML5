@@ -5,7 +5,7 @@
     <title>My Title</title>
 	<link rel='stylesheet' href='css_style/index.css' type='text/css' media='all' />
 </head>
-<body>
+<body onload = "makeGui()">
     
 <script src="java_script/hfh_js.js"></script>
 <script>
@@ -42,11 +42,12 @@
             mIdxButton = arg;
             
             var srcWebView = 'jn://{"method":"callSetSizeWebViewMain:", "x":0, "y":0, "width":320, "height":430, "success":"mySuccess", "error":"myError"}';
-            var rootElement = document.documentElement;
-            var frameElement = document.createElement("IFRAME");
-            frameElement.setAttribute("src",srcWebView);
-            rootElement.appendChild(frameElement);
-            frameElement.parentNode.removeChild(frameElement);
+//            var rootElement = document.documentElement;
+//            var frameElement = document.createElement("IFRAME");
+//            frameElement.setAttribute("src",srcWebView);
+//            rootElement.appendChild(frameElement);
+//            frameElement.parentNode.removeChild(frameElement);
+            window.location = srcWebView;
         }
 
         function onTouchEndAction(aPage) {
@@ -59,16 +60,16 @@
     
         function makeGui() {
             var src = 'jn://{"method":"callMakeButton:", "buttontype":0, "x":0, "y":430, "width":320, "height":50, "title":"Index", "onclick":"loadHome();", "resizingmask":10, "success":"successButton", "error":"myError"}';
-            var rootElement = document.documentElement;
-            var frameElement = document.createElement("IFRAME");
-            frameElement.setAttribute("src",src);
-            rootElement.appendChild(frameElement);
-            frameElement.parentNode.removeChild(frameElement);
+//            var rootElement = document.documentElement;
+//            var frameElement = document.createElement("IFRAME");
+//            frameElement.setAttribute("src",src);
+//            rootElement.appendChild(frameElement);
+//            frameElement.parentNode.removeChild(frameElement);
+            window.location = src;
         }
     
 document.addEventListener("touchmove", function(){ if(event.type == "touchmove") {mIsMoved = true;}}, false);
-    
-document.ready = makeGui();
+
 </script>
     
     <br/><br/>
