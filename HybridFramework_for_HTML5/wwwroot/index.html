@@ -5,7 +5,7 @@
     <title>My Title</title>
 	<link rel='stylesheet' href='css_style/index.css' type='text/css' media='all' />
 </head>
-<body onload = "makeGui()">
+<body>
     
 <script src="java_script/hfh_js.js"></script>
 <script>
@@ -69,7 +69,7 @@
         }
     
 document.addEventListener("touchmove", function(){ if(event.type == "touchmove") {mIsMoved = true;}}, false);
-
+window.onload = makeGui;
 </script>
     
     <br/><br/>
