@@ -35,12 +35,16 @@
  *  Opens a database or creates it if doesn't exist in the specified path
  *  @param aDbPath - file path including the file name
  */
-- (BOOL) openOrCreate:(NSString *) aDbPath;
+- (bool) openOrCreate:(NSString *) aDbPath;
 
-- (bool) isDbOpen;
+/** @Return Result code of SQLite execution */
+- (int)getErrorCode;
+
+/** @Return Error message of SQLite execution */
+- (NSString *)getErrorMsg;
 
 /** Executes a SQLite query which doesn't return rows */
-- (BOOL) execSQLite:(NSString *) aQuery;
+- (bool) execSQLite:(NSString *) aQuery;
 
 /** Executes a SQLite query and returns the result rows */
 - (int) execQuery:(NSString *) aQuery;
@@ -52,16 +56,16 @@
 - (int) moveToNext;
 
 /** Executes a SQLite query that was prepared with <code>prepareQuery</code> and returns the first row */
-- (BOOL) getNextRow;
+- (bool) getNextRow;
 
 /** Evaluates if the current row is the first from the answer of the query */
-- (BOOL) isFirst;
+- (bool) isFirst;
 
 /** Evaluates if the current row is the last from the answer of the query */
-- (BOOL) isLast;
+- (bool) isLast;
 
 /** Evaluates if there are more rows from the query */
-- (BOOL) hasNext;
+- (bool) hasNext;
 
 /** @return - Returns the number of columns in the result */
 - (int) getColumnCount;
@@ -87,18 +91,24 @@
 /** @return - Returns (double) the content of the column at the specified column index */
 - (double) getDoubleColumn:(int) aColumnIndex;
 
-/**
+/** 
  *  Finalizes the statement used for the query
  *  (should call this only if you don't go throught all the rows of the resutl. If you have went throught all the rows
  *  finalized is called int <code>moveToNext</code> and <code>getNextRow</code> methods.
  */
-- (BOOL)doneWithStatement;
-- (BOOL)closeStatement;
+- (bool)doneWithStatement;
+- (bool)closeStatement;
 
 /** Finalizes the sqlite3_stmt and closes the connection to the database */
-- (BOOL) closeDb;
+- (bool) closeDb;
 
 /** @return - Returns the error message from an execSQLite */
 - (NSString *) getErrorMessage;
+
+/* Exposing work directly with sqlite3_stmt so that the user can keep refernces and reuse them */
+- (int)prepareStmt:(NSString *)aQuery sqlite3Stmt:(sqlite3_stmt *)aSqlite3Stmt;
+- (int)moveToNextRow:(sqlite3_stmt *)aSqlite3PreparedStmt;
+- (int)resetStmt:(sqlite3_stmt *)aSqlite3PreparedStmt;
+- (bool)closeDbAndStmts;
 
 @end
