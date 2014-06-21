@@ -17,15 +17,15 @@
 
 #import "DatabaseHfh.h"
 
-@implementation DatabaseHfh
+@implementation DataBaseHfh
 
-- (int)getErrorCode 
+- (int)getErrorCode
 {
     int errorCode = sqlite3_errcode(db);
     return errorCode;
 }
 
-- (NSString *)getErrorMsg 
+- (NSString *)getErrorMsg
 {
     const char *msg;
     msg = sqlite3_errmsg(db);
@@ -34,7 +34,18 @@
     return strMsg;
 }
 
-- (bool) openOrCreate:(NSString *) aDbPath 
+- (NSString *)getErrorMessage
+{
+    NSString *error = nil;
+    if(errMsg != NULL) {
+        error = [[NSString alloc] initWithUTF8String:errMsg];
+    } else {
+        error = [self getErrorMsg];
+    }
+    return error;
+}
+
+- (bool) openOrCreate:(NSString *) aDbPath
 {
     const char *path = [aDbPath UTF8String];
     if(sqlite3_open(path, &db) == SQLITE_OK) {
@@ -45,7 +56,7 @@
     }
 }
 
-- (bool) execSQLite:(NSString *) aQuery 
+- (bool) execSQLite:(NSString *) aQuery
 {
     const char *query = [aQuery UTF8String];
     int retVal;
@@ -59,7 +70,7 @@
     }
 }
 
-- (int) execQuery:(NSString *) aQuery 
+- (int) execQuery:(NSString *) aQuery
 {
     strQuery = aQuery;
     rowCount = -1;
@@ -80,7 +91,7 @@
     return retVal;
 }
 
-- (void) prepareQuery:(NSString *) aQuery 
+- (void) prepareQuery:(NSString *) aQuery
 {
     strQuery = aQuery;
     rowCount = -1;
@@ -88,7 +99,7 @@
     sqlite3_prepare_v2(db, query, -1, &stmt, NULL);
 }
 
-- (int) moveToNext 
+- (int) moveToNext
 {
     int retVal;
     retVal = sqlite3_step(stmt);
@@ -105,7 +116,7 @@
     return retVal;
 }
 
-- (bool) getNextRow 
+- (bool) getNextRow
 {
     int retVal;
     retVal = sqlite3_step(stmt);
@@ -127,7 +138,7 @@
     }
 }
 
-- (bool) isFirst 
+- (bool) isFirst
 {
     if (rowIndex == 0) {
         return true;
@@ -136,7 +147,7 @@
     }
 }
 
-- (bool) isLast 
+- (bool) isLast
 {
     if (rowIndex == ([self getRowCount] - 1)) {
         return true;
@@ -146,7 +157,7 @@
     
 }
 
-- (bool) hasNext 
+- (bool) hasNext
 {
     if (rowIndex < ([self getRowCount] - 1)) {
         return true;
@@ -155,13 +166,13 @@
     }
 }
 
-- (int) getColumnCount 
+- (int) getColumnCount
 {
     int columnCount = sqlite3_column_count(stmt);
     return columnCount;
 }
 
-- (int) getRowCount 
+- (int) getRowCount
 {
     if (rowCount == -1) {
         int stepVal;
@@ -184,13 +195,13 @@
     }
 }
 
-- (NSString *) getColumnName:(int) aColumnIndex 
+- (NSString *) getColumnName:(int) aColumnIndex
 {
     NSString *name = [[NSString alloc] initWithUTF8String: (const char*) sqlite3_column_name(stmt, aColumnIndex)];
     return name;
 }
 
-- (NSString *) getTextColumn:(int) aColumnIndex 
+- (NSString *) getTextColumn:(int) aColumnIndex
 {
     NSString *temp = nil;
     const char *val = (const char *)sqlite3_column_text(stmt, aColumnIndex);
@@ -200,19 +211,19 @@
     return temp;
 }
 
-- (int) getIntColumn:(int) aColumnIndex 
+- (int) getIntColumn:(int) aColumnIndex
 {
     int temp = sqlite3_column_int(stmt, aColumnIndex);
     return temp;
 }
 
-- (double) getDoubleColumn:(int) aColumnIndex 
+- (double) getDoubleColumn:(int) aColumnIndex
 {
     double temp = sqlite3_column_double(stmt, aColumnIndex);
     return temp;
 }
 
-- (bool) doneWithStatement 
+- (bool) doneWithStatement
 {
     if(stmt != NULL) {
         if(sqlite3_finalize(stmt) == SQLITE_OK) {
@@ -226,7 +237,7 @@
     return true;
 }
 
-- (bool)closeStatement 
+- (bool)closeStatement
 {
     if(stmt != NULL) {
         if(sqlite3_finalize(stmt) == SQLITE_OK) {
@@ -240,7 +251,7 @@
     return true;
 }
 
-- (bool) closeDb 
+- (bool) closeDb
 {
     if(stmt != NULL) {
         sqlite3_finalize(stmt);
@@ -253,59 +264,51 @@
     return false;
 }
 
-- (NSString *) getErrorMessage 
-{
-    NSString *error = nil;
-    if(errMsg != NULL) {error = [[NSString alloc] initWithUTF8String:errMsg];}
-    return error;
-}
-
-
  /* Exposing work directly with sqlite3_stmt so that the user can keep refernces and reuse them */
- - (int)prepareStmt:(NSString *)aQuery sqlite3Stmt:(sqlite3_stmt *)aSqlite3Stmt 
+ - (int)prepareStmt:(NSString *)aQuery sqlite3Stmt:(sqlite3_stmt *)aSqlite3Stmt
  {
- 	const char *query = [aQuery UTF8String];
- 	return sqlite3_prepare_v2(db, query, -1, &aSqlite3Stmt, NULL);
+  const char *query = [aQuery UTF8String];
+  return sqlite3_prepare_v2(db, query, -1, &aSqlite3Stmt, NULL);
  }
  
- - (int)moveToNextRow:(sqlite3_stmt *)aSqlite3PreparedStmt 
+ - (int)moveToNextRow:(sqlite3_stmt *)aSqlite3PreparedStmt
  {
- 	int retVal;
- 	retVal = sqlite3_step(aSqlite3PreparedStmt);
- 	if(retVal == SQLITE_ROW) {
- 		rowIndex++;
- 	}
- 	if(retVal == SQLITE_DONE) {
- 		if(aSqlite3PreparedStmt != NULL) {
- 			sqlite3_reset(aSqlite3PreparedStmt);
- 		}
- 	}
- 	if(retVal == SQLITE_ERROR) {NSLog(@"%s, %i, erroCode=%i", __func__, __LINE__, retVal);}
- 	
-	return retVal;
+  int retVal;
+  retVal = sqlite3_step(aSqlite3PreparedStmt);
+  if(retVal == SQLITE_ROW) {
+  rowIndex++;
+  }
+  if(retVal == SQLITE_DONE) {
+  if(aSqlite3PreparedStmt != NULL) {
+  sqlite3_reset(aSqlite3PreparedStmt);
+  }
+  }
+  if(retVal == SQLITE_ERROR) {NSLog(@"%s, %i, erroCode=%i", __func__, __LINE__, retVal);}
+ 
+return retVal;
  }
  
- - (int)resetStmt:(sqlite3_stmt *)aSqlite3PreparedStmt 
+ - (int)resetStmt:(sqlite3_stmt *)aSqlite3PreparedStmt
  {
- 	return sqlite3_reset(aSqlite3PreparedStmt);
+  return sqlite3_reset(aSqlite3PreparedStmt);
  }
  
- - (bool)closeDbAndStmts 
+ - (bool)closeDbAndStmts
  {
- 	if(stmt != NULL) {
- 		sqlite3_finalize(stmt);
- 		stmt = NULL;
- 	}
- 	sqlite3_stmt *tempStmt;
- 	while((tempStmt = sqlite3_next_stmt(db, NULL)) != NULL) {
- 		sqlite3_finalize(tempStmt);
- 	}
- 	if(sqlite3_close(db) == SQLITE_OK) {
- 		return true;
- 	}
- 	NSLog(@"%s, %i, sqlite errorCode=%i, sqlite error msg=%@", __func__, __LINE__, [self getErrorCode], [self getErrorMsg]);
+  if(stmt != NULL) {
+  sqlite3_finalize(stmt);
+  stmt = NULL;
+  }
+  sqlite3_stmt *tempStmt;
+  while((tempStmt = sqlite3_next_stmt(db, NULL)) != NULL) {
+  sqlite3_finalize(tempStmt);
+  }
+  if(sqlite3_close(db) == SQLITE_OK) {
+  return true;
+  }
+  NSLog(@"%s, %i, sqlite errorCode=%i, sqlite error msg=%@", __func__, __LINE__, [self getErrorCode], [self getErrorMsg]);
  
-	return false;
+return false;
  }
 
 @end

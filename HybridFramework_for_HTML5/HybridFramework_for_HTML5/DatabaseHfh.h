@@ -19,11 +19,9 @@
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
 
-@interface DatabaseHfh : NSObject
+@interface DataBaseHfh : NSObject
 {
 @private
-    NSString *mDbPath;
-    bool isOpen;
     NSString *strQuery;
     sqlite3 *db;
     sqlite3_stmt *stmt;
@@ -32,9 +30,9 @@
     int rowCount;
 }
 /**
- *  Opens a database or creates it if doesn't exist in the specified path
- *  @param aDbPath - file path including the file name
- */
+* Opens a database or creates it if doesn't exist in the specified path
+* @param aDbPath - file path including the file name
+*/
 - (bool) openOrCreate:(NSString *) aDbPath;
 
 /** @Return Result code of SQLite execution */
@@ -42,6 +40,9 @@
 
 /** @Return Error message of SQLite execution */
 - (NSString *)getErrorMsg;
+
+/** @return - Returns the error message from an execSQLite */
+- (NSString *) getErrorMessage;
 
 /** Executes a SQLite query which doesn't return rows */
 - (bool) execSQLite:(NSString *) aQuery;
@@ -74,15 +75,15 @@
 - (int) getRowCount;
 
 /**
- *  @return - Returns the name of the column at the specified column index
- *  @param aColumnIndex - the index of the column, zero based
- */
+* @return - Returns the name of the column at the specified column index
+* @param aColumnIndex - the index of the column, zero based
+*/
 - (NSString *) getColumnName:(int) aColumnIndex;
 
 /**
- *  @return - Returns (NSString *) the content of the column at the specified column index
- *  @param aColumnIndex - the index of the column, zero based
- */
+* @return - Returns (NSString *) the content of the column at the specified column index
+* @param aColumnIndex - the index of the column, zero based
+*/
 - (NSString *) getTextColumn:(int) aColumnIndex;
 
 /** @return - Returns (int) the content of the column at the specified column index */
@@ -91,19 +92,16 @@
 /** @return - Returns (double) the content of the column at the specified column index */
 - (double) getDoubleColumn:(int) aColumnIndex;
 
-/** 
- *  Finalizes the statement used for the query
- *  (should call this only if you don't go throught all the rows of the resutl. If you have went throught all the rows
- *  finalized is called int <code>moveToNext</code> and <code>getNextRow</code> methods.
- */
+/**
+* Finalizes the statement used for the query
+* (should call this only if you don't go throught all the rows of the resutl. If you have went throught all the rows
+* finalized is called int <code>moveToNext</code> and <code>getNextRow</code> methods.
+*/
 - (bool)doneWithStatement;
 - (bool)closeStatement;
 
 /** Finalizes the sqlite3_stmt and closes the connection to the database */
 - (bool) closeDb;
-
-/** @return - Returns the error message from an execSQLite */
-- (NSString *) getErrorMessage;
 
 /* Exposing work directly with sqlite3_stmt so that the user can keep refernces and reuse them */
 - (int)prepareStmt:(NSString *)aQuery sqlite3Stmt:(sqlite3_stmt *)aSqlite3Stmt;
