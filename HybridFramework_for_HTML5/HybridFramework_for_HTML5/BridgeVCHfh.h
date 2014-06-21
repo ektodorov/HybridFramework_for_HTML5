@@ -19,7 +19,8 @@
 #import "BridgeListenerHfh.h"
 #import <AddressBookUI/AddressBookUI.h>
 
-@interface BridgeVCHfh : UIViewController <UIWebViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, ABPeoplePickerNavigationControllerDelegate, BridgeListenerHfh>
+@interface BridgeVCHfh : UIViewController <UIWebViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate,
+                                            ABPeoplePickerNavigationControllerDelegate, BridgeListenerHfh>
 
 
 @end

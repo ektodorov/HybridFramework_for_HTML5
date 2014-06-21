@@ -17,23 +17,12 @@
 
 #import "InstanceDataHfh.h"
 
-@interface InstanceDataHfh ()
-//{
-//    NSMutableDictionary *mDictInstanceVariables;
-//    NSMutableArray *mArrayViews;
-//}
-
-@end
-
 @implementation InstanceDataHfh
 
 static InstanceDataHfh *instanceDataInstance;
 
 - (id) init {
     if(self = [super init]) {
-//        mDictInstanceVariables = [[NSMutableDictionary alloc] init];
-//        mArrayViews = [[NSMutableArray alloc] init];
-        
         _dictInstanceVaribles = [[NSMutableDictionary alloc] init];
         _arrayViews = [[NSMutableArray alloc] init];
         _arrayPerformJavaScript = [[NSMutableArray alloc] init];

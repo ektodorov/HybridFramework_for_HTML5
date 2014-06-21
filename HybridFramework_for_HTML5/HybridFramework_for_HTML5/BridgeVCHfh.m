@@ -243,6 +243,4 @@
     [mBridgeHelper buildJsFunction:fName withArgs:[NSArray arrayWithObject:[NSString stringWithFormat:@"%i", currentOrientation]]];
 }
 
-#pragma mark Class Methods
-
 @end
