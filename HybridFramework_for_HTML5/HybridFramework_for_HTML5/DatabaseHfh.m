@@ -17,7 +17,7 @@
 
 #import "DatabaseHfh.h"
 
-@implementation DataBaseHfh
+@implementation DatabaseHfh
 
 - (int)getErrorCode
 {

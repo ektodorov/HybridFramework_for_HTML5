@@ -19,7 +19,7 @@
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
 
-@interface DataBaseHfh : NSObject
+@interface DatabaseHfh : NSObject
 {
 @private
     NSString *strQuery;
