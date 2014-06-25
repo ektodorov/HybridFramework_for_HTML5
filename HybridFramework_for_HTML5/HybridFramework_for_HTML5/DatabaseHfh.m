@@ -267,48 +267,48 @@
  /* Exposing work directly with sqlite3_stmt so that the user can keep refernces and reuse them */
  - (int)prepareStmt:(NSString *)aQuery sqlite3Stmt:(sqlite3_stmt *)aSqlite3Stmt
  {
-  const char *query = [aQuery UTF8String];
-  return sqlite3_prepare_v2(db, query, -1, &aSqlite3Stmt, NULL);
+	const char *query = [aQuery UTF8String];
+	return sqlite3_prepare_v2(db, query, -1, &aSqlite3Stmt, NULL);
  }
  
  - (int)moveToNextRow:(sqlite3_stmt *)aSqlite3PreparedStmt
  {
-  int retVal;
-  retVal = sqlite3_step(aSqlite3PreparedStmt);
-  if(retVal == SQLITE_ROW) {
-  rowIndex++;
-  }
-  if(retVal == SQLITE_DONE) {
-  if(aSqlite3PreparedStmt != NULL) {
-  sqlite3_reset(aSqlite3PreparedStmt);
-  }
-  }
-  if(retVal == SQLITE_ERROR) {NSLog(@"%s, %i, erroCode=%i", __func__, __LINE__, retVal);}
+	int retVal;
+	retVal = sqlite3_step(aSqlite3PreparedStmt);
+	if(retVal == SQLITE_ROW) {
+		rowIndex++;
+  	}
+  	if(retVal == SQLITE_DONE) {
+  		if(aSqlite3PreparedStmt != NULL) {
+  			sqlite3_reset(aSqlite3PreparedStmt);
+  		}
+  	}
+  	if(retVal == SQLITE_ERROR) {NSLog(@"%s, %i, erroCode=%i", __func__, __LINE__, retVal);}
  
-return retVal;
+	return retVal;
  }
  
  - (int)resetStmt:(sqlite3_stmt *)aSqlite3PreparedStmt
  {
-  return sqlite3_reset(aSqlite3PreparedStmt);
+  	return sqlite3_reset(aSqlite3PreparedStmt);
  }
  
  - (bool)closeDbAndStmts
  {
-  if(stmt != NULL) {
-  sqlite3_finalize(stmt);
-  stmt = NULL;
-  }
-  sqlite3_stmt *tempStmt;
-  while((tempStmt = sqlite3_next_stmt(db, NULL)) != NULL) {
-  sqlite3_finalize(tempStmt);
-  }
-  if(sqlite3_close(db) == SQLITE_OK) {
-  return true;
-  }
-  NSLog(@"%s, %i, sqlite errorCode=%i, sqlite error msg=%@", __func__, __LINE__, [self getErrorCode], [self getErrorMsg]);
+  	if(stmt != NULL) {
+  	sqlite3_finalize(stmt);
+  	stmt = NULL;
+  	}
+  	sqlite3_stmt *tempStmt;
+  	while((tempStmt = sqlite3_next_stmt(db, NULL)) != NULL) {
+  		sqlite3_finalize(tempStmt);
+  	}
+  	if(sqlite3_close(db) == SQLITE_OK) {
+  		return true;
+  	}
+  	NSLog(@"%s, %i, sqlite errorCode=%i, sqlite error msg=%@", __func__, __LINE__, [self getErrorCode], [self getErrorMsg]);
  
-return false;
+	return false;
  }
 
 @end
