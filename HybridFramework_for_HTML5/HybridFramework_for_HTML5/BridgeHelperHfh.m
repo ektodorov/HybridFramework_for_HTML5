@@ -205,14 +205,7 @@ static BridgeHelperHfh *helperInstance;
     myButton.frame = CGRectMake(posX, posY, width, height);
     myButton.autoresizingMask = [(NSNumber *)[aDict objectForKey:HFH_KEY_VIEWRESIZINGMASK] intValue];
     
-    NSString *strOnClick = (NSString *)[aDict objectForKey:HFH_KEY_ONCLICK];
-    if(strOnClick) {
-        [[InstanceDataHfh getInstanceData].arrayPerformJavaScript addObject:strOnClick];
-        [myButton addTarget:self action:@selector(callPerformJavaScript:) forControlEvents:UIControlEventTouchUpInside];
-    }
-    
     NSString *strTitle = (NSString *)[aDict objectForKey:HFH_KEY_TITLE];
-    
     //__weak UIButton *weakButton = myButton;
     __weak BridgeHelperHfh *ctx = self;
     dispatch_async(dispatch_get_main_queue(), ^(void){
@@ -223,6 +216,20 @@ static BridgeHelperHfh *helperInstance;
     [[InstanceDataHfh getInstanceData].arrayViews addObject:myButton];
     int idx = [[InstanceDataHfh getInstanceData].arrayViews count];
     idx--;
+	
+	NSString *strOnClick = (NSString *)[aDict objectForKey:HFH_KEY_ONCLICK];
+    if(strOnClick) {
+		if(idx >= [[InstanceDataHfh getInstanceData].arrayPerformJavaScript count]) {
+			for(int x = 0; x <= idx; x++) {
+				[[InstanceDataHfh getInstanceData].arrayPerformJavaScript addObject:[NSNull null]];
+			}
+		}
+		[[InstanceDataHfh getInstanceData].arrayPerformJavaScript removeObjectAtIndex:idx];
+		[[InstanceDataHfh getInstanceData].arrayPerformJavaScript insertObject:strOnClick atIndex:idx];
+        //[[InstanceDataHfh getInstanceData].arrayPerformJavaScript addObject:strOnClick];
+        [myButton addTarget:self action:@selector(callPerformJavaScript:) forControlEvents:UIControlEventTouchUpInside];
+    }
+
     NSString *fName = [aDict objectForKey:HFH_KEY_SUCCESS_CALLBACK];
     [self callJsFunction:fName withArg:[NSString stringWithFormat:@"%i", idx]];
 }
@@ -274,9 +281,18 @@ static BridgeHelperHfh *helperInstance;
 //'jn://{"method":"setButtonOnClickListener:", "onclick":"javascript_function_name", "viewidx":index_in_the_instance_views_array}'
 - (void) setButtonOnClickListener:(NSDictionary *)aDict {
     NSString *strOnClick = (NSString *)[aDict objectForKey:HFH_KEY_ONCLICK];
-    [[InstanceDataHfh getInstanceData].arrayPerformJavaScript addObject:strOnClick];
+    //[[InstanceDataHfh getInstanceData].arrayPerformJavaScript addObject:strOnClick];
     NSNumber *viewIdx = [aDict objectForKey:HFH_KEY_VIEWIDX];
     UIButton *view = (UIButton *)[[InstanceDataHfh getInstanceData].arrayViews objectAtIndex:[viewIdx intValue]];
+	
+	if([viewIdx intValue] >= [[InstanceDataHfh getInstanceData].arrayPerformJavaScript count]) {
+		for(int x = 0; x <= [viewIdx intValue]; x++) {
+			[[InstanceDataHfh getInstanceData].arrayPerformJavaScript addObject:[NSNull null]];
+		}
+	}
+	[[InstanceDataHfh getInstanceData].arrayPerformJavaScript removeObjectAtIndex:[viewIdx intValue]];
+	[[InstanceDataHfh getInstanceData].arrayPerformJavaScript insertObject:strOnClick atIndex:[viewIdx intValue]];
+
     [view addTarget:self action:@selector(callPerformJavaScript:) forControlEvents:UIControlEventTouchUpInside];
 }
 
