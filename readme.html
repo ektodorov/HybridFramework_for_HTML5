@@ -1,0 +1,73 @@
+<h1>HybridFramework for HTML5 mobile applications</h1>
+
+<p>
+HybridFramework for HTML5 is a little framework that enables you to write applications with HTML, CSS, JavaScript and package them as native iOS applications. You can write your web application using all the APIs available for web applications running in Mobile Safari and more.
+The framework through its API enables you to:
+<ul>
+<li> use native views</li>
+<li> use disk storage (as native apps do)</li>
+<li> use SQLite (as native apps do)</li>
+<li> use device specific hardware (camera, address book)</li>
+<li> preserve state while using multiple HTML pages</li>
+</ul>
+</p>
+
+<p><a href="http://toci16.wix.com/hybridframework">Promo site</a></p>
+<p><a href="http://techzealous.net46.net/hfh/">Documentation</a></p>
+
+<br>
+<p>Integration with PhoneGap</p>
+<p>If you are familiar and used to working with PhoneGap you don't have to make a decision between PhoneGap and HybridFramework for HMTL5. You can use HybridFramework for HTML5 with PhoneGap.
+To do so you need to:
+</p>
+
+<p>Create a New Group in the project and add the files:</p>
+BridgeHelpreHfh.h<br>
+BridgeHelperHfh.m<br>
+BridgeListenerHfh.h<br>
+DatabaseHfh.h<br>
+DatabaseHfh.m<br>
+ConstantsHfh.h<br>
+ConstantsHfh.m<br>
+
+Import the ConstantsHfh.h, BridgeHelperHfh.h file in the "CDVViewController.m" file.<br>
+In "CDVViewController.m" file add the methods from BridgeVCHfh.m file from the mark:<br>
+<p>&#35;pragma mark BirdgeListener Protocol</p>
+
+<p>
+Add the following lines in the "CDVViewController.m" file:
+</p>
+
+<pre>
+1.Import BridgeHelperhHfh header file:
+
+	#import "BridgeHelperHfh.h"
+
+
+2.Declare mBridgeHelper instance varialbe:
+
+	BridgeHelperHfh *mBridgeHelper;
+
+
+3.In the "__init" method create mBridgeHelper:
+
+	mBridgeHelper = [[BridgeHelperHfh alloc] init];
+
+
+4.In the "__init" method set listener for mBridgeHelper to self:
+
+    mBridgeHelper.bridgeListener = self;
+
+
+
+5.In the webView:shouldStartLoadWithRequest:navigationType method of the UIWebViewDelegate protocol add a case to handle
+HFH URI Scheme
+
+	else if ([[url sheme] isEqualToString:@"jn"]) {
+		dispatch_queue_t callHfh = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    	dispatch_async(callHfh, ^(void){
+   			[mBridgeHelper callNativeMethod:request];
+  	  	});
+    	return false;
+	}
+</pre>
