@@ -31,11 +31,9 @@ static InstanceDataHfh *instanceDataInstance;
 }
 
 + (InstanceDataHfh *) getInstanceData {
-    if(instanceDataInstance == nil) {
-        @synchronized(self) {
-            if(instanceDataInstance == nil) {
-                instanceDataInstance = [[InstanceDataHfh alloc] init];
-            }
+    @synchronized(self) {
+        if(instanceDataInstance == nil) {
+            instanceDataInstance = [[InstanceDataHfh alloc] init];
         }
     }
     return instanceDataInstance;

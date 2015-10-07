@@ -66,9 +66,13 @@
     NSURL *url = [request URL];
     NSString *strUrl = url.absoluteString;
     if([[strUrl lowercaseString] hasPrefix:HFH_SCHEMA_PREFIX]) {
+        __weak BridgeVCHfh* weakSelf = self;
         dispatch_queue_t callHfh = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
         dispatch_async(callHfh, ^(void){
-            [mBridgeHelper callNativeMethod:request];
+            BridgeVCHfh* strongSelf = weakSelf;
+            if(strongSelf == nil) {return;}
+            
+            [strongSelf->mBridgeHelper callNativeMethod:request];
         });
         return false;
     }
@@ -240,7 +244,7 @@
 - (void)orientationChanged:(NSNotification *)notification {
     UIDeviceOrientation currentOrientation = [[UIDevice currentDevice] orientation]; //int UIDeviceOrientation is enum
     NSString *fName = [mBridgeHelper getCallBackForDeviceOrientationChange];
-    [mBridgeHelper buildJsFunction:fName withArgs:[NSArray arrayWithObject:[NSString stringWithFormat:@"%i", currentOrientation]]];
+    [mBridgeHelper buildJsFunction:fName withArgs:[NSArray arrayWithObject:[NSString stringWithFormat:@"%li", (long)currentOrientation]]];
 }
 
 @end

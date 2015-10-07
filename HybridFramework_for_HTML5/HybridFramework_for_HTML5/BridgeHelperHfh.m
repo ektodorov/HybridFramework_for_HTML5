@@ -58,21 +58,31 @@ static BridgeHelperHfh *helperInstance;
 
 - (void) callJsFunction:(NSString *)aFunctionAndArgs {
     __weak BridgeHelperHfh *ctx = self;
-    dispatch_async(dispatch_get_main_queue(), ^{ [ctx.bridgeListener callJsFunction:aFunctionAndArgs]; });
+    dispatch_async(dispatch_get_main_queue(), ^{
+        BridgeHelperHfh* strongCtx = ctx;
+        if(strongCtx == nil) {return;}
+        
+        [strongCtx->_bridgeListener callJsFunction:aFunctionAndArgs];
+    });
 }
 
 - (void) callJsFunction:(NSString *)aFunc withArg:(NSString *)aArg {
     if(aArg == nil) { aArg = @""; }
     NSString *funcAndArgs = [NSString stringWithFormat:@"%@('%@')", aFunc, aArg];
     __weak BridgeHelperHfh *ctx = self;
-    dispatch_async(dispatch_get_main_queue(), ^{ [ctx.bridgeListener callJsFunction:funcAndArgs]; });
+    dispatch_async(dispatch_get_main_queue(), ^{
+        BridgeHelperHfh* strongCtx = ctx;
+        if(strongCtx == nil) {return;}
+        
+        [strongCtx->_bridgeListener callJsFunction:funcAndArgs];
+    });
 }
 
 - (void) callJsFunction:(NSString *)aFunctionName withArgs:(NSArray *)aArgs {
     NSMutableString *jsFunction = [NSMutableString stringWithFormat:@"%@([", aFunctionName];
-    int arrayCount = [aArgs count];
-    int arrayCountForLoop = [aArgs count];
-    for(int x = 0; x < arrayCountForLoop; x++) {
+    NSUInteger arrayCount = [aArgs count];
+    NSUInteger arrayCountForLoop = [aArgs count];
+    for(NSUInteger x = 0; x < arrayCountForLoop; x++) {
         [jsFunction appendFormat:@"'%@'", [aArgs objectAtIndex:x]];
         arrayCount--;
         if(arrayCount > 0) {
@@ -83,7 +93,12 @@ static BridgeHelperHfh *helperInstance;
     }
     __weak BridgeHelperHfh *ctx = self;
     //NSLog(@"BridgeHelperHfh, %i, jsFunction=%@", __LINE__, jsFunction);
-    dispatch_async(dispatch_get_main_queue(), ^{ [ctx.bridgeListener callJsFunction:jsFunction]; });
+    dispatch_async(dispatch_get_main_queue(), ^{
+        BridgeHelperHfh* strongCtx = ctx;
+        if(strongCtx == nil) {return;}
+        
+        [strongCtx->_bridgeListener callJsFunction:jsFunction];
+    });
 }
 
 - (void) callNativeMethod:(NSURLRequest *)aUrlRequest {
@@ -130,7 +145,12 @@ static BridgeHelperHfh *helperInstance;
     NSString *strJavaScript = [[InstanceDataHfh getInstanceData].arrayPerformJavaScript objectAtIndex:idx];
     //NSLog(@"BirdgeHelperHfh, %i, strJavaScript=%@", __LINE__, strJavaScript);
     __weak BridgeHelperHfh *ctx = self;
-    dispatch_async(dispatch_get_main_queue(), ^{ [ctx.bridgeListener callJsFunction:strJavaScript]; });
+    dispatch_async(dispatch_get_main_queue(), ^{
+        BridgeHelperHfh* strongCtx = ctx;
+        if(strongCtx == nil) {return;}
+        
+        [strongCtx->_bridgeListener callJsFunction:strJavaScript];
+    });
 }
 
 /* Instance Variables Persistence */
@@ -175,7 +195,10 @@ static BridgeHelperHfh *helperInstance;
     int height = [(NSNumber *)[aDict objectForKey:HFH_KEY_HEIGHT] intValue];
     
     dispatch_async(dispatch_get_main_queue(), ^(void){
-        webViewMain.frame = CGRectMake(posX, posY, width, height);
+        UIWebView* strongWebViewMain = webViewMain;
+        if(strongWebViewMain == nil) {return;}
+        
+        strongWebViewMain.frame = CGRectMake(posX, posY, width, height);
     });
 }
 
@@ -209,12 +232,15 @@ static BridgeHelperHfh *helperInstance;
     //__weak UIButton *weakButton = myButton;
     __weak BridgeHelperHfh *ctx = self;
     dispatch_async(dispatch_get_main_queue(), ^(void){
+        BridgeHelperHfh* strongCtx = ctx;
+        if(strongCtx == nil) {return;}
+        
         if(strTitle) {[myButton setTitle:strTitle forState:UIControlStateNormal];}
-        [ctx.bridgeListener callAddSubView:myButton];
+        [strongCtx->_bridgeListener callAddSubView:myButton];
     });
     
     [[InstanceDataHfh getInstanceData].arrayViews addObject:myButton];
-    int idx = [[InstanceDataHfh getInstanceData].arrayViews count];
+    NSUInteger idx = [[InstanceDataHfh getInstanceData].arrayViews count];
     idx--;
 	
 	NSString *strOnClick = (NSString *)[aDict objectForKey:HFH_KEY_ONCLICK];
@@ -231,7 +257,7 @@ static BridgeHelperHfh *helperInstance;
     }
 
     NSString *fName = [aDict objectForKey:HFH_KEY_SUCCESS_CALLBACK];
-    [self callJsFunction:fName withArg:[NSString stringWithFormat:@"%i", idx]];
+    [self callJsFunction:fName withArg:[NSString stringWithFormat:@"%li", (unsigned long)idx]];
 }
 
 //'jn://{"method":"setButtonTitle:", "title":"button_title", "viewidx":index_in_the_instance_views_array}'
@@ -240,7 +266,10 @@ static BridgeHelperHfh *helperInstance;
     NSNumber *viewIdx = [aDict objectForKey:HFH_KEY_VIEWIDX];
     __weak UIButton *view = (UIButton *)[[InstanceDataHfh getInstanceData].arrayViews objectAtIndex:[viewIdx intValue]];
     dispatch_async(dispatch_get_main_queue(), ^(void){
-        [view setTitle:strTitle forState:UIControlStateNormal];
+        UIButton* strongView = view;
+        if(strongView == nil) {return;}
+        
+        [strongView setTitle:strTitle forState:UIControlStateNormal];
     });
 }
 
@@ -301,7 +330,10 @@ static BridgeHelperHfh *helperInstance;
     NSNumber *viewIdx = [aDict objectForKey:HFH_KEY_VIEWIDX];
     __weak UIView *view = (UIView *)[[InstanceDataHfh getInstanceData].arrayViews objectAtIndex:[viewIdx intValue]];
     dispatch_async(dispatch_get_main_queue(), ^(void){
-        [view setHidden:true];
+        UIView* strongView = view;
+        if(strongView == nil) {return;}
+        
+        [strongView setHidden:true];
     });
 }
 
@@ -310,7 +342,10 @@ static BridgeHelperHfh *helperInstance;
     NSNumber *viewIdx = [aDict objectForKey:HFH_KEY_VIEWIDX];
     __weak UIView *view = (UIView *)[[InstanceDataHfh getInstanceData].arrayViews objectAtIndex:[viewIdx intValue]];
     dispatch_async(dispatch_get_main_queue(), ^(void){
-        [view setHidden:false];
+        UIView* strongView = view;
+        if(strongView == nil) {return;}
+        
+        [strongView setHidden:false];
     });
 }
 
@@ -319,7 +354,10 @@ static BridgeHelperHfh *helperInstance;
     NSNumber *viewIdx = [aDict objectForKey:HFH_KEY_VIEWIDX];
     __weak UIView *view = (UIView *)[[InstanceDataHfh getInstanceData].arrayViews objectAtIndex:[viewIdx intValue]];
     dispatch_async(dispatch_get_main_queue(), ^(void){
-        [view removeFromSuperview];
+        UIView* strongView = view;
+        if(strongView == nil) {return;}
+        
+        [strongView removeFromSuperview];
     });
 }
 
@@ -338,7 +376,10 @@ static BridgeHelperHfh *helperInstance;
     [[InstanceDataHfh getInstanceData].arrayViews removeObjectAtIndex:idx]; //safe, the view is still attached to the super view won't be released until removed from super view
     [[InstanceDataHfh getInstanceData].arrayPerformJavaScript removeObjectAtIndex:idx];
     dispatch_async(dispatch_get_main_queue(), ^(void){
-        [view removeFromSuperview];
+        UIView* strongView = view;
+        if(strongView == nil) {return;}
+        
+        [strongView removeFromSuperview];
     });
 }
 
@@ -506,7 +547,10 @@ static BridgeHelperHfh *helperInstance;
 - (void) callCamera:(NSDictionary *)aDict {
     __weak BridgeHelperHfh *ctx = self;
     dispatch_async(dispatch_get_main_queue(), ^(void){
-        [ctx.bridgeListener callShowCamera];
+        BridgeHelperHfh* strongCtx = ctx;
+        if(strongCtx == nil) {return;}
+        
+        [strongCtx->_bridgeListener callShowCamera];
     });
 }
 
@@ -514,7 +558,10 @@ static BridgeHelperHfh *helperInstance;
 - (void) callPhotoLibrary:(NSDictionary *)aDict {
     __weak BridgeHelperHfh *ctx = self;
     dispatch_async(dispatch_get_main_queue(), ^(void){
-        [ctx.bridgeListener callShowPhotoLibrary];
+        BridgeHelperHfh* strongCtx = ctx;
+        if(strongCtx == nil) {return;}
+        
+        [strongCtx->_bridgeListener callShowPhotoLibrary];
     });
 }
 
@@ -526,7 +573,10 @@ static BridgeHelperHfh *helperInstance;
     mStrCallBackForDeviceOrientationChange = [aDict objectForKey:HFH_KEY_SUCCESS_CALLBACK];
     __weak BridgeHelperHfh *ctx = self;
     dispatch_async(dispatch_get_main_queue(), ^(void){
-        [ctx.bridgeListener callBeginDeviceOrientationNotif];
+        BridgeHelperHfh* strongCtx = ctx;
+        if(strongCtx == nil) {return;}
+        
+        [strongCtx->_bridgeListener callBeginDeviceOrientationNotif];
     });
 }
 
@@ -534,7 +584,10 @@ static BridgeHelperHfh *helperInstance;
 - (void) callStopMonitorDeviceOrientation:(NSDictionary *)aDict {
     __weak BridgeHelperHfh *ctx = self;
     dispatch_async(dispatch_get_main_queue(), ^(void){
-        [ctx.bridgeListener callEndDeviceOrientationNotif];
+        BridgeHelperHfh* strongCtx = ctx;
+        if(strongCtx == nil) {return;}
+        
+        [strongCtx->_bridgeListener callEndDeviceOrientationNotif];
     });
     mStrCallBackForDeviceOrientationChange = nil;
 }
@@ -546,15 +599,18 @@ static BridgeHelperHfh *helperInstance;
 - (void) callShowContacts:(NSDictionary *)aDict {
     __weak BridgeHelperHfh *ctx = self;
     dispatch_async(dispatch_get_main_queue(), ^(void){
-        [ctx.bridgeListener callShowAddressBook];
+        BridgeHelperHfh* strongCtx = ctx;
+        if(strongCtx == nil) {return;}
+        
+        [strongCtx->_bridgeListener callShowAddressBook];
     });
 }
 
 #pragma mark Util methods
 - (NSString *) buildJsFunction:(NSString *)aFunctionName withArgs:(NSArray *)aArrayArgs {
     NSMutableString *jsFunc = [NSMutableString stringWithFormat:@"%@('", aFunctionName];
-    int arrayCount = [aArrayArgs count];
-    for(int x = 0; x < arrayCount; x++) {
+    NSUInteger arrayCount = [aArrayArgs count];
+    for(NSUInteger x = 0; x < arrayCount; x++) {
         [jsFunc appendString:[aArrayArgs objectAtIndex:x]];
         if((x + 1) < arrayCount) {[jsFunc appendString:@", "];}
     }
@@ -622,7 +678,12 @@ static BridgeHelperHfh *helperInstance;
 #pragma mark Additional Methods
 - (void) callLoadHome:(NSDictionary *)aDict {
     __weak BridgeHelperHfh *ctx = self;
-    dispatch_async(dispatch_get_main_queue(), ^{ [ctx.bridgeListener callJsFunction:@"window.location = 'index.html';"]; });
+    dispatch_async(dispatch_get_main_queue(), ^{
+        BridgeHelperHfh* strongCtx = ctx;
+        if(strongCtx == nil) {return;}
+        
+        [strongCtx->_bridgeListener callJsFunction:@"window.location = 'index.html';"];
+    });
 }
 
 @end
