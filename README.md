@@ -9,7 +9,7 @@ The framework through its API enables you to:
 - preserve state while using multiple HTML pages
 
 <p><a href="http://toci16.wix.com/hybridframework">Promo site</a></p>
-<p><a href="http://techzealous.net46.net/hfh/">Documentation</a></p>
+Documentation is in the hfh_docs.zip and readme.html.
 
 <br>
 Integration with PhoneGap
