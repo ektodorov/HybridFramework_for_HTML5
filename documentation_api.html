@@ -1,0 +1,3209 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.4.1  (Unix)">
+	<META NAME="CREATED" CONTENT="20131217;18044300">
+	<META NAME="CHANGED" CONTENT="20140107;15320700">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin: 2cm }
+		P { margin-bottom: 0.21cm }
+		P.western { so-language: en }
+		TD P { margin-bottom: 0cm }
+		TD P.western { so-language: en }
+		A:link { so-language: zxx }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en" DIR="LTR">
+<P CLASS="western" STYLE="margin-bottom: 0cm; background: #e6e6e6"><FONT SIZE=3><B>ConstantsHfh</B>
+Class Reference</FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=77*>
+	<COL WIDTH=179*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=30%>
+			<P CLASS="western"><FONT SIZE=3><SPAN STYLE="font-weight: normal">Inherits</SPAN>
+			<I>from</I></FONT></P>
+		</TD>
+		<TD WIDTH=70%>
+			<P CLASS="western"><FONT SIZE=3>NSObject</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=30%>
+			<P CLASS="western"><FONT SIZE=3>Conforms <I>to</I></FONT></P>
+		</TD>
+		<TD WIDTH=70%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western"><FONT SIZE=3><B>Description:</B></FONT></P>
+<P CLASS="western" STYLE="font-weight: normal"><FONT SIZE=3>	Contains
+global constant values.</FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT SIZE=3><B>Global
+Variables:</B></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>/**
+HFH URI Schema prefix (jn - JavaScript to Native */</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular">NSString
+* </FONT><FONT FACE="Menlo-Bold"><B>const</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">
+HFH_SCHEMA_PREFIX = &quot;jn://&quot;</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>/*
+HFH call keys in the JSON object passed as payload to the HFH URI
+Schema */</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>/*
+Key with Objective C method name that is called */</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">NSString
+* </SPAN></FONT><FONT FACE="Menlo-Bold"><B>const</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">
+HFH_KEY_METHODNAME = &quot;method&quot;</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>/*
+Key with name of the JavaScript function which will be called on
+success */</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">NSString
+* </SPAN></FONT><FONT FACE="Menlo-Bold"><B>const</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">
+HFH_KEY_SUCCESS_CALLBACK = &quot;success&quot;</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>/*
+Key with name of the JavaScript function which will be called on
+error */</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">NSString
+* </SPAN></FONT><FONT FACE="Menlo-Bold"><B>const</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">
+HFH_KEY_ERROR_CALLBACK = &quot;error&quot;</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>/*
+Key with x position (int) */</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">NSString
+* </SPAN></FONT><FONT FACE="Menlo-Bold"><B>const</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">
+HFH_KEY_POSX = &quot;x&quot;</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>/*
+Key with y position (int) */</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">NSString
+* </SPAN></FONT><FONT FACE="Menlo-Bold"><B>const</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">
+HFH_KEY_POSY = &quot;y&quot;</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>/*
+Key with width size (int)*/</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">NSString
+* </SPAN></FONT><FONT FACE="Menlo-Bold"><B>const</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">
+HFH_KEY_WIDTH = &quot;width&quot;</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>/*
+Key with height size (int) */</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">NSString
+* </SPAN></FONT><FONT FACE="Menlo-Bold"><B>const</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">
+HFH_KEY_HEIGHT = &quot;height&quot;</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>/*
+Key with view index (int). Index in the Array of views created by
+JavaScript. */</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">NSString
+* </SPAN></FONT><FONT FACE="Menlo-Bold"><B>const</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">
+HFH_KEY_VIEWIDX = &quot;viewidx&quot;</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>/*
+Key with button type (int). One of:</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>* ButtonTypeCustom =
+0</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>* ButtonTypeSystem =
+1</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>*
+ButtonTypeDetailDisclosure = 2</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>*
+ButtonTypeInfoLight = 3</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>* ButtonTypeInfoDark
+= 4</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>*
+ButtonTypeContactAdd = 5</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>*
+ButtonTypeRoundedRect = 6</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=3>*/</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">NSString
+* </SPAN></FONT><FONT FACE="Menlo-Bold"><B>const</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">
+HFH_KEY_BUTTONTYPE = &quot;enumtype&quot;</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>/*
+Key with value for red color (int) */</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">NSString
+* </SPAN></FONT><FONT FACE="Menlo-Bold"><B>const</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">
+HFH_KEY_RED = &quot;red&quot;</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>/*
+Key with value for green color (int) */</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">NSString
+* </SPAN></FONT><FONT FACE="Menlo-Bold"><B>const</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">
+HFH_KEY_GREEN = &quot;green&quot;</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>/*
+Key with value for blue color (int) */</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">NSString
+* </SPAN></FONT><FONT FACE="Menlo-Bold"><B>const</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">
+HFH_KEY_BLUE = &quot;blue&quot;</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>/*
+Key with value for alpha (int) */</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">NSString
+* </SPAN></FONT><FONT FACE="Menlo-Bold"><B>const</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">
+HFH_KEY_ALPHA = &quot;alpha&quot;</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>/*
+Key with file path to an image */</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">NSString
+* </SPAN></FONT><FONT FACE="Menlo-Bold"><B>const</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">
+HFH_KEY_IMAGE = &quot;img&quot;</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">/*
+</SPAN><FONT FACE="Times New Roman, serif"><SPAN STYLE="font-weight: normal">Key
+with name of JavaScript function which will be used as callback
+onclick of native view</SPAN></FONT><SPAN STYLE="font-weight: normal">
+*/</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">NSString
+* </SPAN></FONT><FONT FACE="Menlo-Bold"><B>const</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">
+HFH_KEY_ONCLICK = &quot;onclick&quot;</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>/*
+Key with name for title/lable of a view */</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">NSString
+* </SPAN></FONT><FONT FACE="Menlo-Bold"><B>const</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">
+HFH_KEY_TITLE = &quot;title&quot;</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>/*
+Key with name of instance variable */</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">NSString
+* </SPAN></FONT><FONT FACE="Menlo-Bold"><B>const</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">
+HFH_KEY_NAME = &quot;name&quot;</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>/*
+Key with value of instance variable */</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">NSString
+* </SPAN></FONT><FONT FACE="Menlo-Bold"><B>const</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">
+HFH_KEY_VALUE = &quot;value&quot;</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>/*
+Key with file path */</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">NSString
+* </SPAN></FONT><FONT FACE="Menlo-Bold"><B>const</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">
+HFH_KEY_PATH = &quot;path&quot;</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>/*
+Key with file path to docsdir */</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">NSString
+* </SPAN></FONT><FONT FACE="Menlo-Bold"><B>const</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">
+HFH_KEY_DOCSDIR = &quot;docsdir&quot;</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>/*
+Key with file path to tempdir */</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">NSString
+* </SPAN></FONT><FONT FACE="Menlo-Bold"><B>const</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">
+HFH_KEY_TEMPDIR = &quot;tempdir&quot;</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>/*
+Key with SQLite statement */</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">NSString
+* </SPAN></FONT><FONT FACE="Menlo-Bold"><B>const</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">
+HFH_KEY_SQL = &quot;sql&quot;</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>/*
+Key with file path to HFH Command buffer file */</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">NSString
+* </SPAN></FONT><FONT FACE="Menlo-Bold"><B>const</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">
+HFH_KEY_BUFFER_FILEPATH = &quot;hfh_bufferfile_path&quot;</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>/*
+Name of the HFH Command buffer file name */</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">NSString
+* </SPAN></FONT><FONT FACE="Menlo-Bold"><B>const</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">
+HFH_BUFFER_FILENAME = &quot;hfh_buffer_name&quot;</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT SIZE=3><B>Methods:</B></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Menlo-Regular"><FONT SIZE=2>+
+(NSString *)escapeSingleQuotesForSQL:(NSString *)aString</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Menlo-Regular"><FONT SIZE=2>+
+			(NSString *)escapeSingleQuotesForSQL:(NSString *)aString;</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Replaces
+			single quotes with double single quetes for use in SQLite
+			statements</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT SIZE=3>(NSString *)aString - string on
+			which to perform the operation</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT SIZE=3>(NSString *) string with the
+			performed replacement</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT SIZE=3>ConstantsHfh.h</FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; background: #e6e6e6; font-style: normal; font-weight: normal">
+<FONT SIZE=3><B>BridgeHelperHfh</B> Class Reference</FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=77*>
+	<COL WIDTH=179*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=30%>
+			<P CLASS="western"><FONT SIZE=3><SPAN STYLE="font-weight: normal">Inherits</SPAN>
+			<I>from</I></FONT></P>
+		</TD>
+		<TD WIDTH=70%>
+			<P CLASS="western"><FONT SIZE=3>NSObject</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=30%>
+			<P CLASS="western"><FONT SIZE=3>Conforms <I>to</I></FONT></P>
+		</TD>
+		<TD WIDTH=70%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Description:</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><B>	</B><FONT SIZE=3><SPAN STYLE="font-weight: normal">Contains
+the interface of the HFH. Methods that are available to JavaScript.</SPAN></FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal; line-height: 150%">
+<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Properties:</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal; line-height: 150%">
+<FONT COLOR="#000000"><FONT SIZE=2><B><FONT FACE="Menlo-Bold">id</FONT></B><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">&lt;BridgeListenerHfh&gt;
+bridgeListener</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><B>Methods:</B></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><FONT FACE="Menlo-Regular">+(BridgeHelperHfh
+*)getHelperInstance:(</FONT><FONT FACE="Menlo-Bold"><B>id</B></FONT><FONT FACE="Menlo-Regular">&lt;BridgeListenerHfh&gt;)aListener</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<FONT COLOR="#000000"><FONT FACE="Menlo-Regular"><FONT SIZE=2>-
+(NSDictionary *)getMethodInfo</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<FONT COLOR="#000000"><FONT FACE="Menlo-Regular"><FONT SIZE=2>-
+(NSString *)getCallBackForDeviceOrientationChange</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<FONT COLOR="#000000"><FONT FACE="Menlo-Regular"><FONT SIZE=2>-
+(NSString *)buildJsFunction:(NSString *)aFunctionName
+withArgs:(NSArray *)aArrayArgs</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><FONT FACE="Menlo-Regular">-
+(</FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular">)buildAndInvocateMethod:(NSString
+*)aHfhUriSchemeString</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><FONT FACE="Menlo-Regular">-
+(</FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular">)
+callJsFunction:(NSString *)aFunctionAndArgs</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><FONT FACE="Menlo-Regular">-
+(</FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular">)
+callJsFunction:(NSString *)aFunctionName withArgs:(NSArray *)aArgs</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><FONT FACE="Menlo-Regular">-
+(</FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular">)
+callNativeMethod:(NSURLRequest *)aUrlRequest</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><FONT FACE="Menlo-Regular">-
+(</FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular">)
+callGetInstanceVariable:(NSDictionary *)aDict</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><FONT FACE="Menlo-Regular">-
+(</FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular">)
+callSaveInstanceVariable:(NSDictionary *)aDict</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><FONT FACE="Menlo-Regular">-
+(</FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular">)
+callRemoveInstanceVariable:(NSDictionary *)aDict</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><FONT FACE="Menlo-Regular">-
+(</FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular">)
+callSetSizeWebViewMain:(NSDictionary *)aDict</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><FONT FACE="Menlo-Regular">-
+(</FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular">)
+callMakeButton:(NSDictionary *)aDict</FONT></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">-
+(</SPAN></FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">)
+setButtonTitle:(NSDictionary *)aDict</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">-
+(</SPAN></FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">)
+setBackgroundColor:(NSDictionary *)aDict</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">-
+(</SPAN></FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">)
+setButtonBackgroundImage:(NSDictionary *)aDict</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">-
+(</SPAN></FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">)
+setPositionAndSize:(NSDictionary *)aDict</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">-
+(</SPAN></FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">)
+setButtonOnClickListener:(NSDictionary *)aDict</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">-
+(</SPAN></FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">)
+setViewHidden:(NSDictionary *)aDict</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">-
+(</SPAN></FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">)
+setViewShown:(NSDictionary *)aDict</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">-
+(</SPAN></FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">)
+callRemoveFromSuperView:(NSDictionary *)aDict</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">-
+(</SPAN></FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">)
+callReleaseView:(NSDictionary *)aDict</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">-
+(</SPAN></FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">)
+callRemoveView:(NSDictionary *)aDict</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">-
+(</SPAN></FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">)
+callGetPath:(NSDictionary *)aDict</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">-
+(</SPAN></FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">)
+callGetPathToDocsDir:(NSDictionary *)aDict</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">-
+(</SPAN></FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">)
+callGetPathToTempDir:(NSDictionary *)aDict</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">-
+(</SPAN></FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">)
+callGetCommandBuffer:(NSDictionary *)aDict</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">-
+(</SPAN></FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">)
+callMethodWithCommandBuffer:(NSDictionary *)aDict</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">-
+(</SPAN></FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">)
+callOpenOrCreateDb:(NSDictionary *)aDict</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">-
+(</SPAN></FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">)
+callOpenOrCreateDbInDocsDir:(NSDictionary *)aDict</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">-
+(</SPAN></FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">)
+callOpenOrCreateDbInTempDir:(NSDictionary *)aDict</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">-
+(</SPAN></FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">)
+callExecSQL:(NSDictionary *)aDict</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">-
+(</SPAN></FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">)
+callExecQuery:(NSDictionary *)aDict</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">-
+(</SPAN></FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">)
+callMoveToNext:(NSDictionary *)aDict</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">-
+(</SPAN></FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">)
+callCloseDb:(NSDictionary *)aDict</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">-
+(</SPAN></FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">)
+callCamera:(NSDictionary *)aDict</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">-
+(</SPAN></FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">)
+callPhotoLibrary:(NSDictionary *)aDict</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">-
+(</SPAN></FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">)
+callStartMonitorDeviceOrientation:(NSDictionary *)aDict</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">-
+(</SPAN></FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">)
+callStopMonitorDeviceOrientation:(NSDictionary *)aDict</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">-
+(</SPAN></FONT><FONT FACE="Menlo-Bold"><B>void</B></FONT><FONT FACE="Menlo-Regular"><SPAN STYLE="font-weight: normal">)
+callShowContacts:(NSDictionary *)aDict</SPAN></FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Liberation Serif, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">+
+			(BridgeHelperHfh
+			*)getHelperInstance:(</SPAN><B>id</B><SPAN STYLE="font-weight: normal">&lt;BridgeListenerHfh&gt;)aListener;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Liberation Serif, serif"><FONT SIZE=3>Gets
+			the instance of the BridgeHelperHfh</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Liberation Serif, serif"><FONT SIZE=3>id&lt;BridgeListenerHfh&gt;aListener
+			- Object that comforms to the BridgeListenerHfh Protocol</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Liberation Serif, serif"><FONT SIZE=3>(BridgehelperHfh
+			*) - The Singleton instance of BridgehelperHfh</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Liberation Serif, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>-
+			(NSDictionary *)getMethodInfo;</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Gets
+			the JSON dictionary that was passed with the last call from
+			JavaScript</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*) - dictionary containing JSON data passed by JavaScript</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>-
+			(NSString *)getCallBackForDeviceOrientationChange;</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Gets
+			the JavaScript function name which to be called on orientation
+			change</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSString
+			*) - name of the JavaScript function name</FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>-
+			(NSString *)buildJsFunction:(NSString *)aFunctionName
+			withArgs:(NSArray *)aArrayArgs;</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Builds
+			string that will be used in the Main VC to call
+			stringByEvaluatingJavaScriptFromString</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSString
+			*)aFunctionName - name of the JavaScript function that will be
+			called</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSarray
+			*)aArrayArgs - array of NSStrings of the arguments</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSString
+			*) - string representation of the JavaScript function, ready to be
+			passed to stringByEvaluatingJavaScriptFromString</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgehelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)buildAndInvocateMethod:(NSString
+			*)aHfhUriSchemeString;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Builds
+			a method call and performs it</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSString
+			*)aHfhUriSchemeString - string with HFH URI Scheme. Not URL
+			encoded</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			callJsFunction:(NSString *)aFunctionAndArgs;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Performs
+			a call to a JavaScript function in the Main WebView</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSString
+			*)aFunctionAndArgs - JavaScript function name and arguments -
+			myFunction(arg, otherArg);</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			callJsFunction:(NSString *)aFunctionName withArgs:(NSArray
+			*)aArgs;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Performs
+			a call to a JavaScript function in the Main WebView</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSString
+			*)aFunctionName - name of the JavaScript function</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSArray
+			*)aArgs - array of objects which would be passed as arguments of
+			the JavaScript function</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			callNativeMethod:(NSURLRequest *)aUrlRequest;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Perfoms
+			a call to an Objective C method</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSURLRequest
+			*)aUrlRequest - HFH URI Scheme passed as a NSURLRequest by
+			JavaScript</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			callGetInstanceVariable:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Get
+			an instace variable</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*)aDict - dictionary containing:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_NAME
+			= &quot;name&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000">
+			<FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_SUCCESS_CALLBACK
+			= &quot;success&quot;</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			callSaveInstanceVariable:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Save
+			an instance variable</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*)aDict - dictionary containing:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_NAME
+			= &quot;name&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_VALUE
+			= &quot;value&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000">
+			<FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_SUCCESS_CALLBACK
+			= &quot;success&quot;</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			callRemoveInstanceVariable:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Remove
+			an instance variable</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*)aDict - dictionary containing:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000">
+			<FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_NAME =
+			&quot;name&quot;</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			callSetSizeWebViewMain:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Set
+			position and size for the main WebView</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*)aDict - dictionary containing:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_POSX
+			= &quot;x&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_POSY
+			= &quot;y&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_WIDTH
+			= &quot;width&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000">
+			<FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_HEIGHT =
+			&quot;height&quot;</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			callMakeButton:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Make
+			an UIButton</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>NSDictionary
+			*)aDict - dictionary containing:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000">  <FONT FACE="Times New Roman, serif"><FONT SIZE=3>Position:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000">  <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_POSX
+			= &quot;x&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000">  <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_POSY
+			= &quot;y&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> </FONT>
+			</P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000">  <FONT FACE="Times New Roman, serif"><FONT SIZE=3>Size:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000">  <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_WIDTH
+			= &quot;width&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000">  <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_HEIGHT
+			= &quot;height&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000">  </FONT>
+			</P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000">  <FONT FACE="Times New Roman, serif"><FONT SIZE=3>Type
+			(optional):</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000">  <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_BUTTONTYPE
+			= &quot;type&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000">  <FONT FACE="Times New Roman, serif"><FONT SIZE=3><FONT SIZE=2><I>ButtonTypeCustom
+			= 0</I></FONT></FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000">  <FONT FACE="Times New Roman, serif"><FONT SIZE=2><I>ButtonTypeSystem
+			= 1</I></FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000">  <FONT FACE="Times New Roman, serif"><FONT SIZE=2><I>ButtonTypeDetailDisclosure
+			= 2</I></FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000">  <FONT FACE="Times New Roman, serif"><FONT SIZE=2><I>ButtonTypeInfoLight
+			= 3</I></FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000">  <FONT FACE="Times New Roman, serif"><FONT SIZE=2><I>ButtonTypeInfoDark
+			= 4</I></FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000">  <FONT FACE="Times New Roman, serif"><FONT SIZE=2><I>ButtonTypeContactAdd
+			= 5</I></FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000">  <FONT FACE="Times New Roman, serif"><FONT SIZE=2><I>ButtonTypeRoundedRect
+			= 6</I></FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> </FONT>
+			</P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000">  <FONT FACE="Times New Roman, serif"><FONT SIZE=3>Color
+			(optional):</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000">  <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_RED
+			= &quot;red&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000">  <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_GREEN
+			= &quot;green&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000">  <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_BLUE
+			= &quot;blue&quot;;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000">  <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_ALPHA
+			= &quot;alpha&quot;;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> </FONT>
+			</P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000">  <FONT FACE="Times New Roman, serif"><FONT SIZE=3>Background
+			image (optional):</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000">  <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_IMAGE
+			= &quot;img&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> </FONT>
+			</P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000">  <FONT FACE="Times New Roman, serif"><FONT SIZE=3>On
+			click method (optional):</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000">  <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_ONCLICK
+			= &quot;onclick&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> </FONT>
+			</P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000">  <FONT FACE="Times New Roman, serif"><FONT SIZE=3>Title
+			(optional):</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000">
+			 <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_TITLE =
+			&quot;title&quot;</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>index
+			of the view in the array of native views</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			setButtonTitle:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Set
+			button title</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*)aDict - dictionary containing:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_VIEWIDX
+			= &quot;viewidx&quot; - index of the view in the array of native
+			views</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000">
+			<FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_TITLE =
+			&quot;title&quot;</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			setBackgroundColor:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Set
+			button background color</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*)aDict - dictionary containing:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_VIEWIDX
+			= &quot;viewidx&quot; - index of the view in the array of native
+			views</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_RED
+			= &quot;red&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_GREEN
+			= &quot;green&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_BLUE
+			= &quot;blue&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_ALPHA
+			= &quot;alpha&quot;</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			setButtonBackgroundImage:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Set
+			button background image</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDicitonary
+			*)aDict - dictionary containing:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_VIEWIDX
+			= &quot;viewidx&quot; - index of the view in the array of native
+			views</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_IMAGE
+			= &quot;img&quot;</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			setPositionAndSize:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Set
+			button frame</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*)aDict - dictionary containing:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> <FONT FACE="Times New Roman, serif"><FONT SIZE=3>Position:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_POSX
+			= &quot;x&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_POSY
+			= &quot;y&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> </FONT>
+			</P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> <FONT FACE="Times New Roman, serif"><FONT SIZE=3>Size:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_WIDTH
+			= &quot;width&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000">
+			<FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_HEIGHT =
+			&quot;height&quot;</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			setButtonOnClickListener:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Set
+			button on click listener</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSString
+			*)aDict - dictionary containing:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_VIEWIDX
+			= &quot;viewidx&quot; - index of the view in the array of native
+			views</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_ONCLICK
+			= &quot;onclick&quot; - name of a JavaScript function that will be
+			called when the button is clicked</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			setViewHidden:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Sets
+			a view's hidden property to ture</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDcitionary
+			*)aDict - dictionary containing:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000">
+			<FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_VIEWIDX =
+			&quot;viewidx&quot;</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			setViewShown:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Sets
+			a views hidden property to false</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*)aDict - dictionary containing:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000">
+			<FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_VIEWIDX =
+			&quot;viewidx&quot;</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			callRemoveFromSuperView:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Remove
+			a view from its parent</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*)aDict - dictionary containing:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000">
+			<FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_VIEWIDX =
+			&quot;viewidx&quot; - index of the view in the array of native
+			views</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			callReleaseView:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Remove
+			a view from the array of native views</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*)aDict - dictionary containing:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_VIEWIDX
+			= &quot;viewidx&quot; - index of the view in the array of native
+			views</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			callRemoveView:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Remove
+			a view from its parent and the array of native views</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*)aDict - dictionary containing:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000">
+			<FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_VIEWIDX =
+			&quot;viewidx&quot; - index of the view in the array of native
+			views</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			callGetPath:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Gets
+			path to Documents directory. If there is no value pased for
+			HFH_KEY_DOCSDIR, the path to Temp directory is returned.</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*)aDict - dictionary containing:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000">
+			<FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_DOCSDIR =
+			&quot;docs&quot; - ask for path to the docs dir</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			callGetPathToDocsDir:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Gets
+			the path to the Documents directory</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*)aDict - dictionary containing:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_DOCSDIR
+			= &quot;docsdir&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000">
+			<FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_SUCCESS_CALLBACK
+			= &quot;success&quot;</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			callGetPathToTempDir:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Gets
+			the path to the Temp directory</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*)aDict - dictionary conatining:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000">
+			<FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_SUCCESS_CALLBACK
+			= &quot;success&quot;</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			callGetCommandBuffer:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Returns
+			a path in to a file named with the passed in the dictionary file
+			name. The file is in the Temp directory.</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*)aDict - dictionary containing:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000">
+			<FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_BUFFER_FILENAME
+			= &quot;hfh_buffer_name&quot;</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			callMethodWithCommandBuffer:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>The
+			HFH URI is recorded into a file in the Temp directory, which name
+			is passed with the dictionary</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*)aDict - dictionary containing:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000">
+			<FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_BUFFER_FILEPATH
+			= &quot;hfh_bufferfile_path&quot;</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			callOpenOrCreateDb:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Open
+			or create a DB</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*)aDict - dictionary containing:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_PATH
+			= &quot;path&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_SUCCESS_CALLBACK
+			= &quot;success&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000">
+			<FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_ERROR_CALLBACK
+			= &quot;error&quot;</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			callOpenOrCreateDbInDocsDir:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Open
+			or create a DB using the Docuemnts direcotory as path</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*)aDict - dictionary containing:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_NAME
+			= &quot;name&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_SUCCESS_CALLBACK
+			= &quot;success&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000">
+			<FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_ERROR_CALLBACK
+			= &quot;error&quot;</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			callOpenOrCreateDbInTempDir:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Open
+			of create a DB using the Temp directory as path</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*) - dictionary containing:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_NAME
+			= &quot;name&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_SUCCESS_CALLBACK
+			= &quot;success&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000">
+			<FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_ERROR_CALLBACK
+			= &quot;error&quot;</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			callExecSQL:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Execute
+			a SQLite statement, that does not return rows</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*)aDict - dictionary containing:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_SUCCESS_CALLBACK
+			= &quot;success&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_ERROR_CALLBACK
+			= &quot;error&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000">
+			<FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_SQL =
+			&quot;sql&quot;</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			callExecQuery:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Execute
+			a SQLite query, which returns rows</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSdictionary
+			*)aDict - dictionary containing:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_SQL
+			= &quot;sql&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_SUCCESS_CALLBACK
+			= &quot;success&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000">
+			<FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_ERROR_CALLBACK
+			= &quot;error&quot;</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			callMoveToNext:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Move
+			to next row from the query</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*)aDict - dictionary containing:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_SUCCESS_CALLBACK
+			= &quot;success&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000">
+			<FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_ERROR_CALLBACK
+			= &quot;error&quot;</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			callCloseDb:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Close
+			the DB connection</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*)aDict - dictionary containing:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"> <FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_SUCCESS_CALLBACK
+			= &quot;success&quot;</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000">
+			<FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_ERROR_CALLBACK
+			= &quot;error&quot;</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			callCamera:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Open
+			native camera app for taking picture/video</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*)aDict - (dictionary is not used)</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			callPhotoLibrary:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Open
+			native photo library for browsing and selecting picture</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*)aDict - (dictionary is not used)</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			callStartMonitorDeviceOrientation:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Register
+			for Device orientation changes. The passed in callback will be
+			called on every orientation change</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><I>UIDeviceOrientationUnknown
+			= 0</I></FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><I>UIDeviceOrientationPortrait
+			= 1</I></FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><I>UIDeviceOrientationPortraitUpsideDown
+			= 2</I></FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><I>UIDeviceOrientationLandscapeLeft
+			= 3</I></FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><I>UIDeviceOrientationLandscapeRight
+			= 4</I></FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><I>UIDeviceOrientationFaceUp
+			= 5</I></FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><I>UIDeviceOrientationFaceDown
+			= 6</I></FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<BR>
+			</P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><I>UIDeviceOrientationUnknown
+			- The orientation of the device cannot be determined.</I></FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><I>UIDeviceOrientationPortrait
+			- The device is in portrait mode, with the device held upright and
+			the home button at the bottom.</I></FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><I>UIDeviceOrientationPortraitUpsideDown
+			- The device is in portrait mode but upside down, with the device
+			held upright and the home button at the top.</I></FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><I>UIDeviceOrientationLandscapeLeft
+			- The device is in landscape mode, with the device held upright
+			and the home button on the right side.</I></FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><I>UIDeviceOrientationLandscapeRight
+			- The device is in landscape mode, with the device held upright
+			and the home button on the left side.</I></FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal">
+			<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><I>UIDeviceOrientationFaceUp
+			- The device is held parallel to the ground with the screen facing
+			upwards.</I></FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=2><I>UIDeviceOrientationFaceDown
+			- The device is held parallel to the ground with the screen facing
+			downwards.</I></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*)aDict - dictionary containing:</FONT></FONT></FONT></P>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000">
+			<FONT FACE="Times New Roman, serif"><FONT SIZE=3>HFH_KEY_SUCCESS_CALLBACK
+			= &quot;success&quot;</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><SPAN STYLE="font-weight: normal">-
+			(</SPAN><B>void</B><SPAN STYLE="font-weight: normal">)
+			callStopMonitorDeviceOrientation:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Unregister
+			for Device orientation changes.</FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*)aDict - (not used)</FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-weight: normal; line-height: 150%">
+<BR>
+</P>
+<TABLE WIDTH=100% BORDER=1 BORDERCOLOR="#000000" CELLPADDING=4 CELLSPACING=0 FRAME=VOID>
+	<COL WIDTH=35*>
+	<COL WIDTH=221*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declaration</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3><FONT COLOR="#000000"><SPAN STYLE="font-weight: normal">-
+			(</SPAN></FONT><FONT COLOR="#000000"><B>void</B></FONT><FONT COLOR="#000000"><SPAN STYLE="font-weight: normal">)
+			callShowContacts:(NSDictionary *)aDict;</SPAN></FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Description</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Shows
+			contacts picker</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Parameters</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western" STYLE="font-weight: normal"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>(NSDictionary
+			*)aDict - (dictionary is not used)</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Returns</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=14%>
+			<P CLASS="western"><FONT SIZE=3><I>Declared in</I></FONT></P>
+		</TD>
+		<TD WIDTH=86%>
+			<P CLASS="western"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>BridgeHelperHfh.h</FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal; line-height: 150%">
+<BR>
+</P>
+
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal"><FONT SIZE=3><B>JavaScript
+calls to the interface of the HFH framework (calls to Objective C
+methods):</B></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal">
+<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;callGetInstanceVariable:&quot;,
+&quot;name&quot;:&quot;my_var_name&quot;,
+&quot;success&quot;:&quot;callback_function_name&quot;,
+&quot;error&quot;:&quot;callback_function_name&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal">
+<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;callSaveInstanceVariable:&quot;,
+&quot;name&quot;:&quot;my_var_name&quot;, &quot;value&quot;:&quot;var_value&quot;,
+&quot;success&quot;:&quot;callback_function_name&quot;,
+&quot;error&quot;:&quot;callback_function_name&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal">
+<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;callRemoveInstanceVariable:&quot;,
+&quot;name&quot;:&quot;my_var_name&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal">
+<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;callSetSizeWebViewMain:&quot;,
+&quot;x&quot;:&quot;x_position&quot;, &quot;y&quot;:&quot;y_position&quot;,
+&quot;width&quot;:&quot;size_width&quot;, &quot;height&quot;:&quot;size_height&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal">
+<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:callMakeButton:&quot;,
+&quot;buttontype&quot;:&quot;type_int&quot;, &quot;red&quot;:&quot;redcolorvalue&quot;,
+&quot;green&quot;:&quot;greencolorvalue&quot;,
+&quot;blue&quot;:&quot;bluecolorvalue&quot;, &quot;alpha&quot;:&quot;alpha_value&quot;,
+&quot;x&quot;:&quot;x_position&quot;, &quot;y&quot;:&quot;y_position&quot;,
+&quot;width&quot;:&quot;size_width&quot;, &quot;height&quot;:&quot;size_height&quot;,
+&quot;onclick&quot;:&quot;javascript_function_name&quot;,
+&quot;title&quot;:&quot;button_title&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Values
+for color - [0-255]</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;setButtonTitle:&quot;,
+&quot;title&quot;:&quot;button_title&quot;,
+&quot;viewidx&quot;:&quot;index_in_the_instance_views_array&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;setBackgroundColor:&quot;,
+&quot;red&quot;:&quot;color_value&quot;, &quot;green&quot;:&quot;color_value&quot;,
+&quot;blue&quot;:&quot;color_value&quot;, &quot;alpha&quot;:&quot;alpha_value&quot;,
+&quot;viewidx&quot;:&quot;index_in_the_instance_views_array&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;setButtonBackgroundImage:&quot;,
+&quot;img&quot;:&quot;filepath_toimage_file&quot;,
+&quot;viewidx&quot;:&quot;index_in_the_instance_views_array&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;setPositionAndSize:&quot;,
+&quot;x&quot;:&quot;x_position&quot;, &quot;y&quot;:&quot;y_position&quot;,
+&quot;width&quot;:&quot;size_width&quot;, &quot;height&quot;:&quot;size_height&quot;,
+&quot;viewidx&quot;:&quot;index_in_the_instance_views_array&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;setButtonOnClickListener:&quot;,
+&quot;onclick&quot;:&quot;javascript_function_name&quot;,
+&quot;viewidx&quot;:&quot;index_in_the_instance_views_array&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;setViewHidden:&quot;,
+&quot;viewidx&quot;:&quot;index_in_the_instance_views_array&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;setViewShown:&quot;,
+&quot;viewidx&quot;:&quot;index_in_the_instance_views_array&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;callRemoveFromSuperView:&quot;,
+&quot;viewidx&quot;:&quot;index_in_the_instance_views_array&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;callReleaseView:&quot;,
+&quot;viewidx&quot;:&quot;index_in_the_instance_views_array&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;callRemoveView:&quot;,
+&quot;viewidx&quot;:&quot;index_in_the_instance_views_array&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;callGetPath:&quot;,
+&quot;docsdir&quot;:&quot;yes&quot;,
+&quot;success&quot;:&quot;callback_function_name&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Callback
+should expect the path to be passed as a string argument</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>If
+key dicsdir exists with some value the path to docsdir will be
+returned, if it does not exist, path temp dir will be returned.</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;callGetPathToDocsDir:&quot;,
+&quot;success&quot;:&quot;callback_function_name&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Callback
+should expect the path to be passed as a string argument</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;callGetPathToTempDir:&quot;,
+&quot;success&quot;:&quot;callback_function_name&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Callback
+should expect the path to be passed as a string argument</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;callGetCommandBuffer:&quot;,
+&quot;success&quot;:&quot;callback_function_name&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Callback
+should expect the path to command buffer file to be passed as
+argument</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;callMethodWithCommandBuffer:&quot;,
+&quot;hfh_bufferfile_path&quot;:&quot;filepath_to_bufferfile&quot;,
+&quot;error&quot;:&quot;callback_function_name&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Callback
+should expect error description to be passed as string argument</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;callOpenOrCreateDb:&quot;,
+&quot;path&quot;:&quot;file_path_to_dbfile&quot;,
+&quot;success&quot;:&quot;callback_function_name&quot;,
+&quot;error&quot;:&quot;callback_function_name&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;callOpenOrCreateDbInDocsDir:&quot;,
+&quot;path&quot;:&quot;file_path_to_dbfile&quot;,
+&quot;success&quot;:&quot;callback_function_name&quot;,
+&quot;error&quot;:&quot;callback_function_name&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;callOpenOrCreateDbInTempDir:&quot;,
+&quot;name&quot;:&quot;db_file_name&quot;,
+&quot;success&quot;:&quot;callback_function_name&quot;,
+&quot;error&quot;:&quot;callback_function_name&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;callExecSQL:&quot;,
+&quot;sql&quot;:&quot;sqlite_statement&quot;,
+&quot;success&quot;:&quot;callback_function_name&quot;,
+&quot;error&quot;:&quot;callback_function_name&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;callExecQuery:&quot;,
+&quot;sql&quot;:&quot;sqlite_query_statment&quot;,
+&quot;success&quot;:&quot;callback_function_name&quot;,
+&quot;error&quot;:&quot;callback_function_name&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;callMoveToNext:&quot;,
+&quot;success&quot;:&quot;callback_function_name&quot;,
+&quot;error&quot;:&quot;callback_function_name&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;callCloseDb:&quot;,
+&quot;success&quot;:&quot;callback_function_name&quot;,
+&quot;error&quot;:&quot;callback_function_name&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;callCamera:&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>jn://{&quot;method&quot;:&quot;callPhotoLibrary:&quot;,
+&quot;success&quot;:&quot;callback_function_name&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;callStartMonitorDeviceOrientation:&quot;,
+&quot;success&quot;:&quot;callback_function_name&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;callStopMonitorDeviceOrientation:&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>'jn://{&quot;method&quot;:&quot;callShowContacts:&quot;,
+&quot;success&quot;:&quot;callback_function_name&quot;}'</FONT></FONT></FONT></P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm; font-style: normal"><BR>
+</P>
+<P CLASS="western" STYLE="margin-bottom: 0cm"><BR>
+</P>
+</BODY>
+</HTML>

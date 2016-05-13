@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+  
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+  <title>Hybrid Framework for HTML5 :: Documentation</title>
+<link rel="stylesheet" type="text/css" href="styles/index.css">
+<style>
+
+.title {
+	font-weight: bold;
+}
+.subtitle {
+	font-style: italic;
+}
+
+#navigation {
+	height:70%;
+	width:15%;
+	float:left;
+	display:inline;
+	padding-left:10px;
+	padding-top:50px;
+}
+
+#navigation a:link {color:#000000;}
+#navigation a:visited {color:#000000;}
+#navigation a:hover {color:#FF00FF;}
+
+#content { 
+	margin: 0 auto;
+	width:70%;
+	height:2650px;
+	padding: 30px;
+}
+
+.alignimg {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	padding-top:30px;
+	padding-bottom:30px;
+}
+
+</style>
+
+</head><body alink="#000099" link="#000099" vlink="#990099">
+
+<div class="menu">
+<ul>
+	<li><a href="index.html">Overview</a></li>
+	<li style="background: #4b545f none repeat scroll 0% 50%;"><a style="color: #ffffff;" href="#">Documentation</a></li>
+	<li><a href="contacts.html">Contacts</a></li>
+</ul>
+</div>
+
+<div id="placeholderMenu"></div>
+
+<div id="navigation">
+<a href="#description">Description</a><br><br>
+<a href="documentation_api.html">HFH API</a><br><br>
+<a href="#architecture">Architecture</a><br><br>
+<a href="#howtouse">How to use HFH</a><br><br>
+<a href="#integrationwithphonegap">Integration with PhoneGap</a>
+</div>
+
+<span id="description"></span>
+<div id="content">
+<div class="title">
+<p>Description</p>
+</div>
+
+The aim of the project is to create a software framework, which will enable web developers to use their skills and experience in web development and to create native applications with HTML5 content.<br>
+The basisi of the native container provided by the framework is a WebView, which executes the HTML5 contents and a native API which is responsible for handling request for native functionalities.<br>
+<p>The HFH API provides the following:</p>
+<ul>
+<li>native SQLite database</li>
+<li>access to disk storage</li>
+<li>Camera - photos and video</li>
+<li>Motion Sensors</li>
+<li>Contacts</li>
+<li>Native views</li>
+</ul>
+
+<span id="architecture"></span><br><br>
+<div class="title">
+<p>Architecture</p>
+</div>
+
+<img src="images/architecture.png" class="alignimg"></img>
+
+<ol>
+<li>View layer - common to all target platforms.</li>
+<li>Optional layer - common to all target platforsm.</li>
+<li>Platform specific code - used for tasks that cannot be accomplished in Javascript or are not optimal, or slow when done with Javascript.</li>
+</ol>
+The presented model can be viewed as an MVC model:<br>
+1 - View<br>
+2 and 3 - Model and Controller<br>
+We accomplish reuse of 1 and 2 throught out all target platforms.
+
+
+<span id="howtouse"></span><br><br>
+<div class="title">
+<p>How to use the HFH</p>
+</div>
+
+<img src="images/howtouse.png" class="alignimg"></img>
+
+<p>Tutorial on using the HFH</p>
+Use the template project HFH and rename the project. In the left side of the Project explorer select projects derive the Detail editor and change the name of the project. Change the name of the directory in which the project and again in Detail editor indicating the location of the project to point to the renamed directory. In Project Settings choose each page and use the search function by searching the old name of the project and the results change it to the new name you have chosen. Clear the project and build if the build passes without errors renaming was successful. If an error occurs then we forget to rename some of the resources, threfore repeat each step to find what you missed.<br>
+
+Web content such as HTML pages, JavaScript files, images and other resources is located in the wwwroot directory<br>
+Delete the content of the wwwroot directory and copy your content in this directory.<br><br>
+
+
+<span id="integrationwithphonegap"></span><br><br>
+<div class="title">
+<p>Integration with PhoneGap</p>
+</div>
+<p>If you are familiar and used to working with PhoneGap you don't have to make a decision between PhoneGap and HybridFramework for HMTL5. You can use HybridFramework for HTML5 with PhoneGap.
+To do so you need to:
+</p>
+
+<p>Create a New Group in the project and add the files:</p>
+BridgeHelpreHfh.h<br>
+BridgeHelperHfh.m<br>
+BridgeListenerHfh.h<br>
+DatabaseHfh.h<br>
+DatabaseHfh.m<br>
+ConstantsHfh.h<br>
+ConstantsHfh.m<br>
+
+Import the ConstantsHfh.h, BridgeHelperHfh.h file in the "CDVViewController.m" file.<br>
+In "CDVViewController.m" file add the methods from BridgeVCHfh.m file from the mark:<br>
+<p>&#35;pragma mark BirdgeListener Protocol</p>
+
+<p>
+Add the following lines in the "CDVViewController.m" file:
+</p>
+
+<pre>
+1.Import BridgeHelperhHfh header file:
+
+	#import "BridgeHelperHfh.h"
+
+
+2.Declare mBridgeHelper instance varialbe:
+
+	BridgeHelperHfh *mBridgeHelper;
+
+
+3.In the "__init" method create mBridgeHelper:
+
+	mBridgeHelper = [[BridgeHelperHfh alloc] init];
+
+
+4.In the "__init" method set listener for mBridgeHelper to self:
+
+    mBridgeHelper.bridgeListener = self;
+
+
+
+5.In the webView:shouldStartLoadWithRequest:navigationType method of the UIWebViewDelegate protocol add a case to handle
+HFH URI Scheme
+
+	else if ([[url sheme] isEqualToString:@"jn"]) {
+		dispatch_queue_t callHfh = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    	dispatch_async(callHfh, ^(void){
+   			[mBridgeHelper callNativeMethod:request];
+  	  	});
+    	return false;
+	}
+</pre>
+
+</div><!--content-->
+<br><br>
+
+<div class="footer">
+	<span>Hybrid Framework for HTML5 applications</span><br>
+	<div id="footerLeft">
+	Source:<br>
+	<a href="https://github.com/ektodorov/HybridFramework_for_HTML5">https://github.com/ektodorov/HybridFramework_for_HTML5</a><br>
+	<a href="https://github.com/ektodorov/HybridFramework_for_HTML5_Android">https://github.com/ektodorov/HybridFramework_for_HTML5_Android</a>
+	</div>
+	<div id="footerRight">
+	Contacts:<br>
+	emil.k.todorov@gmail.com<br>
+	<a href="http://toci16.wix.com/hybridframework">Promo site</a>
+	</div>
+</div>
+
+</body></html>

@@ -1,0 +1,81 @@
+html {
+	height:100%;
+}
+
+body {
+	/* background-image:url("images/Test1.png");
+	 * background-size:100% 100%;
+	 */
+	margin:0;    
+    padding:0;
+	height:97%;
+	background-color:rgb(255, 255, 255);
+}
+
+/* -------------------- Menu -------------------- */
+.menu {
+	margin:0 auto;
+	width:100%;
+	height:55px;
+  	text-align: center;
+	background:#dddddd;
+	box-shadow:0px 0px 4px 1px #888888;
+
+	/*Make fixed on top allways*/
+	position:fixed;
+	top:-10px;
+}
+.menu ul {
+  padding: 0px 0px;
+  list-style: none;
+  position: relative;
+  display: inline-table;
+}
+.menu ul:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.menu ul li {
+  float: left;
+}
+.menu ul li:hover {
+  background: #4b545f none repeat scroll 0% 50%;
+}
+.menu ul li:hover a {
+  color: #ffffff;
+}
+.menu ul li a {
+  padding: 10px 35px;
+  color: #757575;
+  display: block;
+  text-decoration: none;
+}
+
+#placeholderMenu {
+	height:55px;
+}
+
+/* -------------------- Footer -------------------- */
+.footer {
+	text-align:center;
+	background-color: #444444;
+	color:#ffffff;
+	height:100px;
+	width:100%;
+	font-size:small;
+}
+
+.footer a:visited {color:#ffffff;}
+.footer a:hover {color:#FF00FF;}
+
+#footerLeft {
+	padding-left:10%;
+	float:left;
+	text-align:left;
+	display:inline;
+}
+#footerRight {
+	text-align:left;
+	display:inline;
+}
