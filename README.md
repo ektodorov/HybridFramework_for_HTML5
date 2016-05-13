@@ -8,6 +8,7 @@ The framework through its API enables you to:
 - use device specific hardware (camera, address book)
 - preserve state while using multiple HTML pages
 
+<p><a href="http://ektodorov.github.io/HybridFramework_for_HTML5/">Documentation</a></p>
 <p><a href="http://toci16.wix.com/hybridframework">Promo site</a></p>
 Documentation is in the hfh_docs.zip and readme.html.
 
