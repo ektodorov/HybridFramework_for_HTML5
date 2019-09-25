@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html><head>
+  
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<title>Index</title>
+<link rel="stylesheet" type="text/css" href="css_style/index.css">
+
+</head><body>
+
+<script src="java_script/hfh_js.js"></script>
+<script>
+    function getCommandBufferPath() {
+        var src = 'jn://{"method":"callGetCommandBuffer:", "success":"successCommandBufferPath"}';
+        var rootElement = document.documentElement;
+        var frameElement = document.createElement("IFRAME");
+        frameElement.setAttribute("src",src);
+        rootElement.appendChild(frameElement);
+        frameElement.parentNode.removeChild(frameElement);
+        window.event.preventDefault();
+    }
+
+    function successCommandBufferPath(aPath) {
+        document.getElementById("result").innerHTML = aPath;
+    }
+</script>
+
+<center>
+<p>Command Buffer</p>
+<button ontouchend="getCommandBufferPath()">Get command buffer path</button>
+</center>
+Path to command buffer file:
+<p id="result"></p>
+
+</body></html>

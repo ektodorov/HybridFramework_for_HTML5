@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html><head>
+    
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+        <title>Index</title>
+        <link rel="stylesheet" type="text/css" href="css_style/index.css">
+            
+</head><body>
+    
+<script src="java_script/hfh_js.js"></script>
+<script>
+    
+function openDb() {
+    var src = 'jn://{"method":"callOpenOrCreateDbInTempDir:", "name":"db_file_name", "success":"successOpenDb", "error":"callback_function_name"}';
+    var rootElement = document.documentElement;
+    var frameElement = document.createElement("IFRAME");
+    frameElement.setAttribute("src",src);
+    rootElement.appendChild(frameElement);
+    frameElement.parentNode.removeChild(frameElement);
+    window.event.preventDefault();
+}
+
+function makeTable() {
+    var src = 'jn://{"method":"callExecSQL:", "sql":"CREATE TABLE IF NOT EXISTS contacts(_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, name TEXT, phone TEXT);", "success":"successMakeTable", "error":"errorMakeTable()"}';
+    var rootElement = document.documentElement;
+    var frameElement = document.createElement("IFRAME");
+    frameElement.setAttribute("src",src);
+    rootElement.appendChild(frameElement);
+    frameElement.parentNode.removeChild(frameElement);
+}
+
+function closeDb() {
+    var src = 'jn://{"method":"callCloseDb:", "success":"successCloseDb", "error":"errorCloseDb"}';
+    var rootElement = document.documentElement;
+    var frameElement = document.createElement("IFRAME");
+    frameElement.setAttribute("src",src);
+    rootElement.appendChild(frameElement);
+    frameElement.parentNode.removeChild(frameElement);
+}
+
+function saveToDb() {
+    var name = document.getElementById("id_name").value;
+    var phone = document.getElementById("id_phone").value;
+    var stmt = "INSERT INTO contacts(name, phone) VALUES('" + name + "', '" + phone + "');";
+    
+    var src = 'jn://{"method":"callExecSQL:", "sql":"' + stmt + '", "success":"successSaveToDb", "error":"errorSaveToDb"}';
+    var rootElement = document.documentElement;
+    var frameElement = document.createElement("IFRAME");
+    frameElement.setAttribute("src",src);
+    rootElement.appendChild(frameElement);
+    frameElement.parentNode.removeChild(frameElement);
+}
+
+function displayDb() {
+    document.getElementById("result").innerHTML = "";
+    var src = 'jn://{"method":"callExecQuery:", "sql":"SELECT * FROM contacts;", "success":"successDisplayDb", "error":"erroDisplayDb"}';
+    var rootElement = document.documentElement;
+    var frameElement = document.createElement("IFRAME");
+    frameElement.setAttribute("src",src);
+    rootElement.appendChild(frameElement);
+    frameElement.parentNode.removeChild(frameElement);
+}
+
+function moveToNext() {
+    var src = 'jn://{"method":"callMoveToNext:", "success":"successDisplayDb", "error":"errorMoveToNext"}';
+    var rootElement = document.documentElement;
+    var frameElement = document.createElement("IFRAME");
+    frameElement.setAttribute("src",src);
+    rootElement.appendChild(frameElement);
+    frameElement.parentNode.removeChild(frameElement);
+}
+
+function successOpenDb() {
+    makeTable();
+}
+function successMakeTable() {
+    saveToDb();
+}
+function successSaveToDb() {
+    displayDb();
+}
+function successDisplayDb(aResponse) {
+    if(aResponse != "SQLITE_DONE") {
+        var content = document.getElementById("result").innerHTML;
+        document.getElementById("result").innerHTML = content.concat(aResponse);
+        moveToNext();
+    } else {
+        closeDb();
+    }
+}
+function successCloseDb() {
+    document.getElementById("log").innerHTML = "successCloseDb";
+}
+
+function errorOpenDb() {
+    document.getElementById("log").innerHTML = "errorOpenDb";
+}
+function errorMakeTable() {
+    document.getElementById("log").innerHTML = "errorMakeTable";
+}
+function errorSaveToDb() {
+    document.getElementById("log").innerHTML = "errorSaveToDb";
+}
+function errorCloseDb() {
+    document.getElementById("log").innerHTML = "errorCloseDb";
+}
+function errorDisplayDb() {
+    document.getElementById("log").innerHTML = "errorDisplayDb";
+}
+function errorMoveToNext() {
+    document.getElementById("log").innerHTML = "errorMoveToNext";
+}
+
+</script>
+
+<center>
+    <p>Database</p>
+</center>
+<form>
+    <fieldset><legend>DB Record:</legend>
+        <div id="name">
+            <label for="name">name:</label>
+            <input type="text" name="input_name" id="id_name">
+        </div>
+        <br/>
+        <div id="phone">
+            <label for="phone">phone:</label>
+            <input type="text" name="input_phone" id="id_phone">
+        </div>
+    </fieldset>
+</form>
+<p><button ontouchend="openDb()">Save Record</button></p><br/>
+Records:
+<p id="result"></p>
+
+Log:
+<p id="log"></p>
+
+</body></html>
